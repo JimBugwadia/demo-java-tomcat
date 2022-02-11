@@ -93,11 +93,17 @@ jobs:
         ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
     - name : Attest SBOM
+      env:
+        COSIGN_EXPERIMENTAL: "true"
       run: cosign attest --predicate sbom.json --type https://cyclonedx.org/bom  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
     - name : Attest Vulnerability Scan
+      env:
+        COSIGN_EXPERIMENTAL: "true"    
       run: cosign attest --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
     - name : Attest Provenance
+      env:
+        COSIGN_EXPERIMENTAL: "true"    
       run: cosign attest --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
