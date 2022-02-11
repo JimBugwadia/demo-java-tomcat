@@ -1,3387 +1,602 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.3" serialNumber="urn:uuid:983239ef-ac27-48c9-89f0-ab0012078340" version="1">
-  <metadata>
-    <timestamp>2022-02-10T23:35:44-08:00</timestamp>
-    <tools>
-      <tool>
-        <vendor>anchore</vendor>
-        <name>syft</name>
-        <version>0.37.10</version>
-      </tool>
-    </tools>
-    <component bom-ref="74b61e795c7cf971" type="container">
-      <name>ghcr.io/jimbugwadia/demo-java-tomcat:v1</name>
-      <version>sha256:98f450a644710e21e1881b57b696526f3b07b93db531a9a9e6186600b1a467f4</version>
-    </component>
-  </metadata>
-  <components>
-    <component type="library">
-      <name>activation</name>
-      <version>1.1</version>
-      <cpe>cpe:2.3:a:sun-microsystems\,-inc-:activation:1.1:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alpine-baselayout</name>
-      <version>3.2.0-r16</version>
-      <description>Alpine base dir structure and init scripts</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alpine-baselayout:alpine-baselayout:3.2.0-r16:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alpine-baselayout@3.2.0-r16?arch=x86_64&amp;upstream=alpine-baselayout&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">alpine-baselayout</property>
-        <property name="size">20716</property>
-        <property name="installedSize">413696</property>
-        <property name="pullDependencies">/bin/sh so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1UJtB9cNV4r+/VbxySkEei++qbho=</property>
-        <property name="gitCommitOfApkPort">8a8c96a0ea2fcd824c361aa4438763fa33ee8ca0</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alpine-baselayout</name>
-      <version>3.2.0-r16</version>
-      <description>Alpine base dir structure and init scripts</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alpine-baselayout:alpine-baselayout:3.2.0-r16:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alpine-baselayout@3.2.0-r16?arch=x86_64&amp;upstream=alpine-baselayout&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">alpine-baselayout</property>
-        <property name="size">20716</property>
-        <property name="installedSize">413696</property>
-        <property name="pullDependencies">/bin/sh so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1UJtB9cNV4r+/VbxySkEei++qbho=</property>
-        <property name="gitCommitOfApkPort">8a8c96a0ea2fcd824c361aa4438763fa33ee8ca0</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alpine-baselayout</name>
-      <version>3.2.0-r16</version>
-      <description>Alpine base dir structure and init scripts</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alpine-baselayout:alpine-baselayout:3.2.0-r16:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alpine-baselayout@3.2.0-r16?arch=x86_64&amp;upstream=alpine-baselayout&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">alpine-baselayout</property>
-        <property name="size">20716</property>
-        <property name="installedSize">413696</property>
-        <property name="pullDependencies">/bin/sh so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1UJtB9cNV4r+/VbxySkEei++qbho=</property>
-        <property name="gitCommitOfApkPort">8a8c96a0ea2fcd824c361aa4438763fa33ee8ca0</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alpine-keys</name>
-      <version>2.4-r0</version>
-      <description>Public keys for Alpine Linux packages</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alpine-keys:alpine-keys:2.4-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alpine-keys@2.4-r0?arch=x86_64&amp;upstream=alpine-keys&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://alpinelinux.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">alpine-keys</property>
-        <property name="size">13096</property>
-        <property name="installedSize">159744</property>
-        <property name="pullChecksum">Q1WrbOrvWIwuQgSQypNNmmmF0srUw=</property>
-        <property name="gitCommitOfApkPort">29fef454d1503e98d1ba5c928d539a4d5c988d13</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alpine-keys</name>
-      <version>2.4-r0</version>
-      <description>Public keys for Alpine Linux packages</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alpine-keys:alpine-keys:2.4-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alpine-keys@2.4-r0?arch=x86_64&amp;upstream=alpine-keys&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://alpinelinux.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">alpine-keys</property>
-        <property name="size">13096</property>
-        <property name="installedSize">159744</property>
-        <property name="pullChecksum">Q1WrbOrvWIwuQgSQypNNmmmF0srUw=</property>
-        <property name="gitCommitOfApkPort">29fef454d1503e98d1ba5c928d539a4d5c988d13</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alpine-keys</name>
-      <version>2.4-r0</version>
-      <description>Public keys for Alpine Linux packages</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alpine-keys:alpine-keys:2.4-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alpine-keys@2.4-r0?arch=x86_64&amp;upstream=alpine-keys&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://alpinelinux.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">alpine-keys</property>
-        <property name="size">13096</property>
-        <property name="installedSize">159744</property>
-        <property name="pullChecksum">Q1WrbOrvWIwuQgSQypNNmmmF0srUw=</property>
-        <property name="gitCommitOfApkPort">29fef454d1503e98d1ba5c928d539a4d5c988d13</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alsa-lib</name>
-      <version>1.2.5-r2</version>
-      <description>Advanced Linux Sound Architecture (ALSA) library</description>
-      <licenses>
-        <license>
-          <id>LGPL-2.1-or-later</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alsa-lib:alsa-lib:1.2.5-r2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alsa-lib@1.2.5-r2?arch=x86_64&amp;upstream=alsa-lib&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://www.alsa-project.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">alsa-lib</property>
-        <property name="size">471726</property>
-        <property name="installedSize">1499136</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1VJKcwaPTKAmxUiJm0lfeSE0bVuk=</property>
-        <property name="gitCommitOfApkPort">51e4fc6fdcac475e81417ffd078e052a7f3f5cb2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>alsa-lib</name>
-      <version>1.2.5-r2</version>
-      <description>Advanced Linux Sound Architecture (ALSA) library</description>
-      <licenses>
-        <license>
-          <id>LGPL-2.1-or-later</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:alsa-lib:alsa-lib:1.2.5-r2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/alsa-lib@1.2.5-r2?arch=x86_64&amp;upstream=alsa-lib&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://www.alsa-project.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">alsa-lib</property>
-        <property name="size">471726</property>
-        <property name="installedSize">1499136</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1VJKcwaPTKAmxUiJm0lfeSE0bVuk=</property>
-        <property name="gitCommitOfApkPort">51e4fc6fdcac475e81417ffd078e052a7f3f5cb2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>annotations-api</name>
-      <version>1.3.FR</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-annotations-api:1.3.FR:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/annotations-api.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>apk-tools</name>
-      <version>2.12.7-r0</version>
-      <description>Alpine Package Keeper - package manager for alpine</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:apk-tools:apk-tools:2.12.7-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/apk-tools@2.12.7-r0?arch=x86_64&amp;upstream=apk-tools&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://gitlab.alpinelinux.org/alpine/apk-tools</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">apk-tools</property>
-        <property name="size">119979</property>
-        <property name="installedSize">311296</property>
-        <property name="pullDependencies">musl>=1.2 so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1 so:libssl.so.1.1 so:libz.so.1</property>
-        <property name="pullChecksum">Q1VnSoy5XasRtvFODOZ9P0pZG4Hxs=</property>
-        <property name="gitCommitOfApkPort">03c6b1b0ec20f417cee0f3c1d56795b27871b1c5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>apk-tools</name>
-      <version>2.12.7-r0</version>
-      <description>Alpine Package Keeper - package manager for alpine</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:apk-tools:apk-tools:2.12.7-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/apk-tools@2.12.7-r0?arch=x86_64&amp;upstream=apk-tools&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://gitlab.alpinelinux.org/alpine/apk-tools</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">apk-tools</property>
-        <property name="size">119979</property>
-        <property name="installedSize">311296</property>
-        <property name="pullDependencies">musl>=1.2 so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1 so:libssl.so.1.1 so:libz.so.1</property>
-        <property name="pullChecksum">Q1VnSoy5XasRtvFODOZ9P0pZG4Hxs=</property>
-        <property name="gitCommitOfApkPort">03c6b1b0ec20f417cee0f3c1d56795b27871b1c5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>apk-tools</name>
-      <version>2.12.7-r0</version>
-      <description>Alpine Package Keeper - package manager for alpine</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:apk-tools:apk-tools:2.12.7-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/apk-tools@2.12.7-r0?arch=x86_64&amp;upstream=apk-tools&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://gitlab.alpinelinux.org/alpine/apk-tools</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">apk-tools</property>
-        <property name="size">119979</property>
-        <property name="installedSize">311296</property>
-        <property name="pullDependencies">musl>=1.2 so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1 so:libssl.so.1.1 so:libz.so.1</property>
-        <property name="pullChecksum">Q1VnSoy5XasRtvFODOZ9P0pZG4Hxs=</property>
-        <property name="gitCommitOfApkPort">03c6b1b0ec20f417cee0f3c1d56795b27871b1c5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>apr</name>
-      <version>1.7.0-r0</version>
-      <description>The Apache Portable Runtime</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:apr:apr:1.7.0-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/apr@1.7.0-r0?arch=x86_64&amp;upstream=apr&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://apr.apache.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">apr</property>
-        <property name="size">94548</property>
-        <property name="installedSize">225280</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libuuid.so.1</property>
-        <property name="pullChecksum">Q1MRaVTmGl0sNTAIEZQ+QIgZxC0/k=</property>
-        <property name="gitCommitOfApkPort">159c19b64ed54d83268a98ab413a91addfce64e8</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>bootstrap</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:Bootstrap:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/bin/bootstrap.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>busybox</name>
-      <version>1.33.1-r6</version>
-      <description>Size optimized toolbox of many common UNIX utilities</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:busybox:busybox:1.33.1-r6:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/busybox@1.33.1-r6?arch=x86_64&amp;upstream=busybox&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://busybox.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">busybox</property>
-        <property name="size">499566</property>
-        <property name="installedSize">950272</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1dgtiXUOjvBmrjmjNI1P/d9kQxBw=</property>
-        <property name="gitCommitOfApkPort">b08c19fd29b302ab411d43e52855cec047fd3803</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>busybox</name>
-      <version>1.33.1-r6</version>
-      <description>Size optimized toolbox of many common UNIX utilities</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:busybox:busybox:1.33.1-r6:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/busybox@1.33.1-r6?arch=x86_64&amp;upstream=busybox&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://busybox.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">busybox</property>
-        <property name="size">499566</property>
-        <property name="installedSize">950272</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1dgtiXUOjvBmrjmjNI1P/d9kQxBw=</property>
-        <property name="gitCommitOfApkPort">b08c19fd29b302ab411d43e52855cec047fd3803</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>busybox</name>
-      <version>1.33.1-r6</version>
-      <description>Size optimized toolbox of many common UNIX utilities</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:busybox:busybox:1.33.1-r6:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/busybox@1.33.1-r6?arch=x86_64&amp;upstream=busybox&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://busybox.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">busybox</property>
-        <property name="size">499566</property>
-        <property name="installedSize">950272</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1dgtiXUOjvBmrjmjNI1P/d9kQxBw=</property>
-        <property name="gitCommitOfApkPort">b08c19fd29b302ab411d43e52855cec047fd3803</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>ca-certificates-bundle</name>
-      <version>20191127-r5</version>
-      <description>Pre generated bundle of Mozilla certificates</description>
-      <licenses>
-        <license>
-          <id>MPL-2.0</id>
-        </license>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:ca-certificates-bundle:ca-certificates-bundle:20191127-r5:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/ca-certificates-bundle@20191127-r5?arch=x86_64&amp;upstream=ca-certificates&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">ca-certificates</property>
-        <property name="size">124473</property>
-        <property name="installedSize">233472</property>
-        <property name="pullChecksum">Q1bQ4InxwFIUUNl11tjOwqrqAeAIA=</property>
-        <property name="gitCommitOfApkPort">51999ab9304ec11c68c4ea9e99350ac7570e7f21</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>ca-certificates-bundle</name>
-      <version>20191127-r5</version>
-      <description>Pre generated bundle of Mozilla certificates</description>
-      <licenses>
-        <license>
-          <id>MPL-2.0</id>
-        </license>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:ca-certificates-bundle:ca-certificates-bundle:20191127-r5:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/ca-certificates-bundle@20191127-r5?arch=x86_64&amp;upstream=ca-certificates&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">ca-certificates</property>
-        <property name="size">124473</property>
-        <property name="installedSize">233472</property>
-        <property name="pullChecksum">Q1bQ4InxwFIUUNl11tjOwqrqAeAIA=</property>
-        <property name="gitCommitOfApkPort">51999ab9304ec11c68c4ea9e99350ac7570e7f21</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>ca-certificates-bundle</name>
-      <version>20191127-r5</version>
-      <description>Pre generated bundle of Mozilla certificates</description>
-      <licenses>
-        <license>
-          <id>MPL-2.0</id>
-        </license>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:ca-certificates-bundle:ca-certificates-bundle:20191127-r5:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/ca-certificates-bundle@20191127-r5?arch=x86_64&amp;upstream=ca-certificates&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">ca-certificates</property>
-        <property name="size">124473</property>
-        <property name="installedSize">233472</property>
-        <property name="pullChecksum">Q1bQ4InxwFIUUNl11tjOwqrqAeAIA=</property>
-        <property name="gitCommitOfApkPort">51999ab9304ec11c68c4ea9e99350ac7570e7f21</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>catalina</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-catalina:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/catalina.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>catalina-ant</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:catalina-ant:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/catalina-ant.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>catalina-ha</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-catalina-ha:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/catalina-ha.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>catalina-ssi</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:catalina-ssi:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/catalina-ssi.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>catalina-storeconfig</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:catalina-storeconfig:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/catalina-storeconfig.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>catalina-tribes</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:catalina-tribes:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/catalina-tribes.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>checker-qual</name>
-      <version>3.12.0</version>
-      <cpe>cpe:2.3:a:checkerframework:checker-qual:3.12.0:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>commons-codec</group>
-      <name>commons-codec</name>
-      <version>1.11</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:commons-codec:1.11:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/commons-codec/commons-codec@1.11</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">commons-codec</property>
-        <property name="artifactID">commons-codec</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>commons-daemon</group>
-      <name>commons-daemon</name>
-      <version>1.2.4</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:commons-daemon:1.2.4:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/commons-daemon/commons-daemon@1.2.4</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/bin/commons-daemon.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="groupID">commons-daemon</property>
-        <property name="artifactID">commons-daemon</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>commons-logging</group>
-      <name>commons-logging</name>
-      <version>1.2</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:commons-logging:1.2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/commons-logging/commons-logging@1.2</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">commons-logging</property>
-        <property name="artifactID">commons-logging</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>ecj</name>
-      <version>4.20</version>
-      <cpe>cpe:2.3:a:compiler:compiler:4.20:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/ecj-4.20.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>el-api</name>
-      <version>3.0.FR</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-el-api:3.0.FR:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/el-api.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.google.errorprone</group>
-      <name>error_prone_annotations</name>
-      <version>2.7.1</version>
-      <cpe>cpe:2.3:a:error-prone-annotations:error-prone-annotations:2.7.1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.google.errorprone/error_prone_annotations@2.7.1</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.google.errorprone</property>
-        <property name="artifactID">error_prone_annotations</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.google.guava</group>
-      <name>failureaccess</name>
-      <version>1.0.1</version>
-      <cpe>cpe:2.3:a:failureaccess:failureaccess:1.0.1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.google.guava/failureaccess@1.0.1</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.google.guava</property>
-        <property name="artifactID">failureaccess</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.google.guava</group>
-      <name>guava</name>
-      <version>31.0.1-jre</version>
-      <cpe>cpe:2.3:a:google:guava:31.0.1-jre:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.google.guava/guava@31.0.1-jre</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.google.guava</property>
-        <property name="artifactID">guava</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>org.apache.httpcomponents</group>
-      <name>httpclient</name>
-      <version>4.5.13</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:httpclient:4.5.13:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/org.apache.httpcomponents/httpclient@4.5.13</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">org.apache.httpcomponents</property>
-        <property name="artifactID">httpclient</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>org.apache.httpcomponents</group>
-      <name>httpcore</name>
-      <version>4.4.13</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:httpcore:4.4.13:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/org.apache.httpcomponents/httpcore@4.4.13</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">org.apache.httpcomponents</property>
-        <property name="artifactID">httpcore</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.google.j2objc</group>
-      <name>j2objc-annotations</name>
-      <version>1.3</version>
-      <cpe>cpe:2.3:a:j2objc-annotations:j2objc-annotations:1.3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.google.j2objc/j2objc-annotations@1.3</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.google.j2objc</property>
-        <property name="artifactID">j2objc-annotations</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.fasterxml.jackson.core</group>
-      <name>jackson-annotations</name>
-      <version>2.13.0</version>
-      <cpe>cpe:2.3:a:jackson-annotations:jackson-annotations:2.13.0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.13.0</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.fasterxml.jackson.core</property>
-        <property name="artifactID">jackson-annotations</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.fasterxml.jackson.core</group>
-      <name>jackson-core</name>
-      <version>2.13.0</version>
-      <cpe>cpe:2.3:a:jackson-core:jackson-core:2.13.0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-core@2.13.0</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.fasterxml.jackson.core</property>
-        <property name="artifactID">jackson-core</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jackson-core-asl</name>
-      <version>1.9.2</version>
-      <cpe>cpe:2.3:a:http\:\/\/www-ietf-org\/rfc\/rfc4627-txt:jackson-core-asl:1.9.2:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.fasterxml.jackson.core</group>
-      <name>jackson-databind</name>
-      <version>2.13.0</version>
-      <cpe>cpe:2.3:a:jackson-databind:jackson-databind:2.13.0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.fasterxml.jackson.core</property>
-        <property name="artifactID">jackson-databind</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jackson-jaxrs</name>
-      <version>1.9.2</version>
-      <cpe>cpe:2.3:a:http\:\/\/fasterxml-com:jackson-jaxrs:1.9.2:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jackson-mapper-asl</name>
-      <version>1.9.2</version>
-      <cpe>cpe:2.3:a:http\:\/\/fasterxml-com:jackson-mapper-asl:1.9.2:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jackson-xc</name>
-      <version>1.9.2</version>
-      <cpe>cpe:2.3:a:http\:\/\/fasterxml-com:jackson-xc:1.9.2:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jasper</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-jasper:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/jasper.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jasper-el</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-jasper-el:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/jasper-el.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jaspic-api</name>
-      <version>1.1.FR</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-jaspic-api:1.1.FR:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/jaspic-api.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>java-common</name>
-      <version>0.4-r0</version>
-      <description>Java common (updates java links)</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-or-later</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:java-common:java-common:0.4-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/java-common@0.4-r0?arch=x86_64&amp;upstream=java-common&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.alpinelinux.org/aports/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">java-common</property>
-        <property name="size">3414</property>
-        <property name="installedSize">12288</property>
-        <property name="pullDependencies">/bin/sh</property>
-        <property name="pullChecksum">Q1zd+jxRYjlL4nxqouq/Odu1QD3pU=</property>
-        <property name="gitCommitOfApkPort">c1b3f87b471e56354a65aa5e6acf542222e43b22</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>java-common</name>
-      <version>0.4-r0</version>
-      <description>Java common (updates java links)</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-or-later</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:java-common:java-common:0.4-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/java-common@0.4-r0?arch=x86_64&amp;upstream=java-common&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.alpinelinux.org/aports/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">java-common</property>
-        <property name="size">3414</property>
-        <property name="installedSize">12288</property>
-        <property name="pullDependencies">/bin/sh</property>
-        <property name="pullChecksum">Q1zd+jxRYjlL4nxqouq/Odu1QD3pU=</property>
-        <property name="gitCommitOfApkPort">c1b3f87b471e56354a65aa5e6acf542222e43b22</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jaxb-api</name>
-      <version>2.2.2</version>
-      <cpe>cpe:2.3:a:sun-microsystems\,-inc-:jaxb-api:2.2.2:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jaxb-impl</name>
-      <version>2.2.3-1</version>
-      <cpe>cpe:2.3:a:oracle-corporation:jaxb-impl:2.2.3-1:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.sun.jersey</group>
-      <name>jersey-core</name>
-      <version>1.19.4</version>
-      <cpe>cpe:2.3:a:oracle-corporation:jersey-core:1.19.4:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.sun.jersey/jersey-core@1.19.4</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.sun.jersey</property>
-        <property name="artifactID">jersey-core</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.sun.jersey</group>
-      <name>jersey-json</name>
-      <version>1.19.4</version>
-      <cpe>cpe:2.3:a:oracle-corporation:jersey-json:1.19.4:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.sun.jersey/jersey-json@1.19.4</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.sun.jersey</property>
-        <property name="artifactID">jersey-json</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.sun.jersey</group>
-      <name>jersey-server</name>
-      <version>1.19.4</version>
-      <cpe>cpe:2.3:a:oracle-corporation:jersey-server:1.19.4:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.sun.jersey/jersey-server@1.19.4</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.sun.jersey</property>
-        <property name="artifactID">jersey-server</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>org.codehaus.jettison</group>
-      <name>jettison</name>
-      <version>1.1</version>
-      <cpe>cpe:2.3:a:codehaus:jettison:1.1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/org.codehaus.jettison/jettison@1.1</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">org.codehaus.jettison</property>
-        <property name="artifactID">jettison</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jrt-fs</name>
-      <version>17.0.1</version>
-      <cpe>cpe:2.3:a:azul-systems\,-inc-:jrt-fs:17.0.1:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/usr/lib/jvm/zulu17-ca/lib/jrt-fs.jar</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>jsp-api</name>
-      <version>2.3.FR</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-jsp-api:2.3.FR:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/jsp-api.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.google.code.findbugs</group>
-      <name>jsr305</name>
-      <version>3.0.2</version>
-      <cpe>cpe:2.3:a:findbugs:jsr305:3.0.2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.google.code.findbugs/jsr305@3.0.2</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.google.code.findbugs</property>
-        <property name="artifactID">jsr305</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>javax.ws.rs</group>
-      <name>jsr311-api</name>
-      <version>1.1.1</version>
-      <cpe>cpe:2.3:a:sun-microsystems\,-inc-:jsr311-api:1.1.1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/javax.ws.rs/jsr311-api@1.1.1</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">javax.ws.rs</property>
-        <property name="artifactID">jsr311-api</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Drew DeVault &lt;sir@cmpwn.com&gt;</publisher>
-      <name>libbsd</name>
-      <version>0.11.3-r0</version>
-      <description>commonly-used BSD functions not implemented by all libcs</description>
-      <cpe>cpe:2.3:a:libbsd:libbsd:0.11.3-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libbsd@0.11.3-r0?arch=x86_64&amp;upstream=libbsd&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://libbsd.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libbsd</property>
-        <property name="size">33433</property>
-        <property name="installedSize">81920</property>
-        <property name="pullDependencies">musl so:libc.musl-x86_64.so.1 so:libmd.so.0</property>
-        <property name="pullChecksum">Q13fL92K1DsxZUTQacJGmGncYCpfs=</property>
-        <property name="gitCommitOfApkPort">d6dfe3c0e58e4e9352de352f55e48c1f70913ae5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Drew DeVault &lt;sir@cmpwn.com&gt;</publisher>
-      <name>libbsd</name>
-      <version>0.11.3-r0</version>
-      <description>commonly-used BSD functions not implemented by all libcs</description>
-      <cpe>cpe:2.3:a:libbsd:libbsd:0.11.3-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libbsd@0.11.3-r0?arch=x86_64&amp;upstream=libbsd&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://libbsd.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libbsd</property>
-        <property name="size">33433</property>
-        <property name="installedSize">81920</property>
-        <property name="pullDependencies">musl so:libc.musl-x86_64.so.1 so:libmd.so.0</property>
-        <property name="pullChecksum">Q13fL92K1DsxZUTQacJGmGncYCpfs=</property>
-        <property name="gitCommitOfApkPort">d6dfe3c0e58e4e9352de352f55e48c1f70913ae5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libc-utils</name>
-      <version>0.7.2-r3</version>
-      <description>Meta package to pull in correct libc</description>
-      <licenses>
-        <license>
-          <id>BSD-2-Clause</id>
-        </license>
-        <license>
-          <id>BSD-3-Clause</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libc-utils:libc-utils:0.7.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libc-utils@0.7.2-r3?arch=x86_64&amp;upstream=libc-dev&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://alpinelinux.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libc-dev</property>
-        <property name="size">1228</property>
-        <property name="installedSize">4096</property>
-        <property name="pullDependencies">musl-utils</property>
-        <property name="pullChecksum">Q1UsLZaz0/Go44hd4Vw49UCt40Vp8=</property>
-        <property name="gitCommitOfApkPort">60424133be2e79bbfeff3d58147a22886f817ce2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libc-utils</name>
-      <version>0.7.2-r3</version>
-      <description>Meta package to pull in correct libc</description>
-      <licenses>
-        <license>
-          <id>BSD-2-Clause</id>
-        </license>
-        <license>
-          <id>BSD-3-Clause</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libc-utils:libc-utils:0.7.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libc-utils@0.7.2-r3?arch=x86_64&amp;upstream=libc-dev&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://alpinelinux.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">libc-dev</property>
-        <property name="size">1228</property>
-        <property name="installedSize">4096</property>
-        <property name="pullDependencies">musl-utils</property>
-        <property name="pullChecksum">Q1UsLZaz0/Go44hd4Vw49UCt40Vp8=</property>
-        <property name="gitCommitOfApkPort">60424133be2e79bbfeff3d58147a22886f817ce2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libc-utils</name>
-      <version>0.7.2-r3</version>
-      <description>Meta package to pull in correct libc</description>
-      <licenses>
-        <license>
-          <id>BSD-2-Clause</id>
-        </license>
-        <license>
-          <id>BSD-3-Clause</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libc-utils:libc-utils:0.7.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libc-utils@0.7.2-r3?arch=x86_64&amp;upstream=libc-dev&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://alpinelinux.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libc-dev</property>
-        <property name="size">1228</property>
-        <property name="installedSize">4096</property>
-        <property name="pullDependencies">musl-utils</property>
-        <property name="pullChecksum">Q1UsLZaz0/Go44hd4Vw49UCt40Vp8=</property>
-        <property name="gitCommitOfApkPort">60424133be2e79bbfeff3d58147a22886f817ce2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>libcrypto1.1</name>
-      <version>1.1.1l-r0</version>
-      <description>Crypto library from openssl</description>
-      <licenses>
-        <license>
-          <id>OpenSSL</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libcrypto1.1:libcrypto1.1:1.1.1l-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libcrypto1.1@1.1.1l-r0?arch=x86_64&amp;upstream=openssl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.openssl.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">openssl</property>
-        <property name="size">1211998</property>
-        <property name="installedSize">2768896</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1Sywj1TEYEdvX0+MuqC+ea+zXxR0=</property>
-        <property name="gitCommitOfApkPort">3ef1965150d5b1de4af88dc51cf407e11b20b848</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>libcrypto1.1</name>
-      <version>1.1.1l-r0</version>
-      <description>Crypto library from openssl</description>
-      <licenses>
-        <license>
-          <id>OpenSSL</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libcrypto1.1:libcrypto1.1:1.1.1l-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libcrypto1.1@1.1.1l-r0?arch=x86_64&amp;upstream=openssl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.openssl.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">openssl</property>
-        <property name="size">1211998</property>
-        <property name="installedSize">2768896</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1Sywj1TEYEdvX0+MuqC+ea+zXxR0=</property>
-        <property name="gitCommitOfApkPort">3ef1965150d5b1de4af88dc51cf407e11b20b848</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>libcrypto1.1</name>
-      <version>1.1.1l-r0</version>
-      <description>Crypto library from openssl</description>
-      <licenses>
-        <license>
-          <id>OpenSSL</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libcrypto1.1:libcrypto1.1:1.1.1l-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libcrypto1.1@1.1.1l-r0?arch=x86_64&amp;upstream=openssl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.openssl.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">openssl</property>
-        <property name="size">1211998</property>
-        <property name="installedSize">2768896</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1Sywj1TEYEdvX0+MuqC+ea+zXxR0=</property>
-        <property name="gitCommitOfApkPort">3ef1965150d5b1de4af88dc51cf407e11b20b848</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>omni &lt;omni+alpine@hack.org&gt;</publisher>
-      <name>libmd</name>
-      <version>1.0.3-r0</version>
-      <description>Message Digest functions from BSD systems</description>
-      <cpe>cpe:2.3:a:libmd:libmd:1.0.3-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libmd@1.0.3-r0?arch=x86_64&amp;upstream=libmd&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.hadrons.org/software/libmd/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libmd</property>
-        <property name="size">19688</property>
-        <property name="installedSize">57344</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q18BJQxK+tB/IHSnlWN/TZdqIr6Rc=</property>
-        <property name="gitCommitOfApkPort">6d6b0decbeef7cf1d5df9a62df2081b6151c0dc8</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>omni &lt;omni+alpine@hack.org&gt;</publisher>
-      <name>libmd</name>
-      <version>1.0.3-r0</version>
-      <description>Message Digest functions from BSD systems</description>
-      <cpe>cpe:2.3:a:libmd:libmd:1.0.3-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libmd@1.0.3-r0?arch=x86_64&amp;upstream=libmd&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.hadrons.org/software/libmd/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libmd</property>
-        <property name="size">19688</property>
-        <property name="installedSize">57344</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q18BJQxK+tB/IHSnlWN/TZdqIr6Rc=</property>
-        <property name="gitCommitOfApkPort">6d6b0decbeef7cf1d5df9a62df2081b6151c0dc8</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Ariadne Conill &lt;ariadne@dereferenced.org&gt;</publisher>
-      <name>libretls</name>
-      <version>3.3.3p1-r2</version>
-      <description>port of libtls from libressl to openssl</description>
-      <licenses>
-        <license>
-          <id>ISC</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libretls:libretls:3.3.3p1-r2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libretls@3.3.3p1-r2?arch=x86_64&amp;upstream=libretls&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.causal.agency/libretls/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libretls</property>
-        <property name="size">28872</property>
-        <property name="installedSize">86016</property>
-        <property name="pullDependencies">ca-certificates-bundle so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1 so:libssl.so.1.1</property>
-        <property name="pullChecksum">Q1mKL75PNQ3352oQUtXLS8GfI+37M=</property>
-        <property name="gitCommitOfApkPort">161d02ee8c48f3c3cae1d2b4b5d008fa318da0e1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Ariadne Conill &lt;ariadne@dereferenced.org&gt;</publisher>
-      <name>libretls</name>
-      <version>3.3.3p1-r2</version>
-      <description>port of libtls from libressl to openssl</description>
-      <licenses>
-        <license>
-          <id>ISC</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libretls:libretls:3.3.3p1-r2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libretls@3.3.3p1-r2?arch=x86_64&amp;upstream=libretls&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.causal.agency/libretls/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">libretls</property>
-        <property name="size">28872</property>
-        <property name="installedSize">86016</property>
-        <property name="pullDependencies">ca-certificates-bundle so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1 so:libssl.so.1.1</property>
-        <property name="pullChecksum">Q1mKL75PNQ3352oQUtXLS8GfI+37M=</property>
-        <property name="gitCommitOfApkPort">161d02ee8c48f3c3cae1d2b4b5d008fa318da0e1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Ariadne Conill &lt;ariadne@dereferenced.org&gt;</publisher>
-      <name>libretls</name>
-      <version>3.3.3p1-r2</version>
-      <description>port of libtls from libressl to openssl</description>
-      <licenses>
-        <license>
-          <id>ISC</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libretls:libretls:3.3.3p1-r2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libretls@3.3.3p1-r2?arch=x86_64&amp;upstream=libretls&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.causal.agency/libretls/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libretls</property>
-        <property name="size">28872</property>
-        <property name="installedSize">86016</property>
-        <property name="pullDependencies">ca-certificates-bundle so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1 so:libssl.so.1.1</property>
-        <property name="pullChecksum">Q1mKL75PNQ3352oQUtXLS8GfI+37M=</property>
-        <property name="gitCommitOfApkPort">161d02ee8c48f3c3cae1d2b4b5d008fa318da0e1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>libssl1.1</name>
-      <version>1.1.1l-r0</version>
-      <description>SSL shared libraries</description>
-      <licenses>
-        <license>
-          <id>OpenSSL</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libssl1.1:libssl1.1:1.1.1l-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libssl1.1@1.1.1l-r0?arch=x86_64&amp;upstream=openssl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.openssl.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">openssl</property>
-        <property name="size">212918</property>
-        <property name="installedSize">540672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1</property>
-        <property name="pullChecksum">Q1Fgsc0DiapwjaJHbihB9ZrLQhr7Q=</property>
-        <property name="gitCommitOfApkPort">3ef1965150d5b1de4af88dc51cf407e11b20b848</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>libssl1.1</name>
-      <version>1.1.1l-r0</version>
-      <description>SSL shared libraries</description>
-      <licenses>
-        <license>
-          <id>OpenSSL</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libssl1.1:libssl1.1:1.1.1l-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libssl1.1@1.1.1l-r0?arch=x86_64&amp;upstream=openssl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.openssl.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">openssl</property>
-        <property name="size">212918</property>
-        <property name="installedSize">540672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1</property>
-        <property name="pullChecksum">Q1Fgsc0DiapwjaJHbihB9ZrLQhr7Q=</property>
-        <property name="gitCommitOfApkPort">3ef1965150d5b1de4af88dc51cf407e11b20b848</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teras &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>libssl1.1</name>
-      <version>1.1.1l-r0</version>
-      <description>SSL shared libraries</description>
-      <licenses>
-        <license>
-          <id>OpenSSL</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libssl1.1:libssl1.1:1.1.1l-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libssl1.1@1.1.1l-r0?arch=x86_64&amp;upstream=openssl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.openssl.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">openssl</property>
-        <property name="size">212918</property>
-        <property name="installedSize">540672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1</property>
-        <property name="pullChecksum">Q1Fgsc0DiapwjaJHbihB9ZrLQhr7Q=</property>
-        <property name="gitCommitOfApkPort">3ef1965150d5b1de4af88dc51cf407e11b20b848</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libuuid</name>
-      <version>2.37.2-r0</version>
-      <description>DCE compatible Universally Unique Identifier library</description>
-      <licenses>
-        <license>
-          <id>GPL-3.0-or-later</id>
-        </license>
-        <license>
-          <id>GPL-2.0-or-later</id>
-        </license>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libuuid:libuuid:2.37.2-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libuuid@2.37.2-r0?arch=x86_64&amp;upstream=util-linux&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://git.kernel.org/cgit/utils/util-linux/util-linux.git</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">util-linux</property>
-        <property name="size">13302</property>
-        <property name="installedSize">40960</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1ZruqwedYcCO3Y+2YKlLaLryUumE=</property>
-        <property name="gitCommitOfApkPort">010734651f25e9b4ccb6fa6b8d05de43501f7b3b</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libx11</name>
-      <version>1.7.2-r0</version>
-      <description>X11 client-side library</description>
-      <cpe>cpe:2.3:a:libx11:libx11:1.7.2-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libx11@1.7.2-r0?arch=x86_64&amp;upstream=libx11&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libx11</property>
-        <property name="size">886375</property>
-        <property name="installedSize">3317760</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libxcb.so.1</property>
-        <property name="pullChecksum">Q1N3sETD2hehRo8LS6LkQPh2YHvlA=</property>
-        <property name="gitCommitOfApkPort">56865d2071f91e86b7a42908cc2af70f18a15e11</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libx11</name>
-      <version>1.7.2-r0</version>
-      <description>X11 client-side library</description>
-      <cpe>cpe:2.3:a:libx11:libx11:1.7.2-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libx11@1.7.2-r0?arch=x86_64&amp;upstream=libx11&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libx11</property>
-        <property name="size">886375</property>
-        <property name="installedSize">3317760</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libxcb.so.1</property>
-        <property name="pullChecksum">Q1N3sETD2hehRo8LS6LkQPh2YHvlA=</property>
-        <property name="gitCommitOfApkPort">56865d2071f91e86b7a42908cc2af70f18a15e11</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxau</name>
-      <version>1.0.9-r0</version>
-      <description>X11 authorisation library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxau:libxau:1.0.9-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxau@1.0.9-r0?arch=x86_64&amp;upstream=libxau&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libxau</property>
-        <property name="size">5675</property>
-        <property name="installedSize">28672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1ptqWhIiZaKsLQ2Q5KVxFI/rmYsA=</property>
-        <property name="gitCommitOfApkPort">bf94fe726e658c7944e10f2b38d14fa68ca642da</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxau</name>
-      <version>1.0.9-r0</version>
-      <description>X11 authorisation library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxau:libxau:1.0.9-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxau@1.0.9-r0?arch=x86_64&amp;upstream=libxau&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libxau</property>
-        <property name="size">5675</property>
-        <property name="installedSize">28672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1ptqWhIiZaKsLQ2Q5KVxFI/rmYsA=</property>
-        <property name="gitCommitOfApkPort">bf94fe726e658c7944e10f2b38d14fa68ca642da</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxcb</name>
-      <version>1.14-r2</version>
-      <description>X11 client-side library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxcb:libxcb:1.14-r2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxcb@1.14-r2?arch=x86_64&amp;upstream=libxcb&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://xcb.freedesktop.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libxcb</property>
-        <property name="size">235203</property>
-        <property name="installedSize">1019904</property>
-        <property name="pullDependencies">so:libXau.so.6 so:libXdmcp.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1THLMsrayW7/cIxnqxj84iIWyR6o=</property>
-        <property name="gitCommitOfApkPort">cd2d9fe07f299ce733b756d658c34ba089ddbbfd</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxcb</name>
-      <version>1.14-r2</version>
-      <description>X11 client-side library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxcb:libxcb:1.14-r2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxcb@1.14-r2?arch=x86_64&amp;upstream=libxcb&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://xcb.freedesktop.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libxcb</property>
-        <property name="size">235203</property>
-        <property name="installedSize">1019904</property>
-        <property name="pullDependencies">so:libXau.so.6 so:libXdmcp.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1THLMsrayW7/cIxnqxj84iIWyR6o=</property>
-        <property name="gitCommitOfApkPort">cd2d9fe07f299ce733b756d658c34ba089ddbbfd</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxdmcp</name>
-      <version>1.1.3-r0</version>
-      <description>X11 Display Manager Control Protocol library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxdmcp:libxdmcp:1.1.3-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxdmcp@1.1.3-r0?arch=x86_64&amp;upstream=libxdmcp&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libxdmcp</property>
-        <property name="size">9655</property>
-        <property name="installedSize">40960</property>
-        <property name="pullDependencies">so:libbsd.so.0 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1nJdS9oVlnYhOY0Zt4yuTyc2FyTY=</property>
-        <property name="gitCommitOfApkPort">27cf05f3f054c20dc23398592e8c2d4feb79e7f2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxdmcp</name>
-      <version>1.1.3-r0</version>
-      <description>X11 Display Manager Control Protocol library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxdmcp:libxdmcp:1.1.3-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxdmcp@1.1.3-r0?arch=x86_64&amp;upstream=libxdmcp&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libxdmcp</property>
-        <property name="size">9655</property>
-        <property name="installedSize">40960</property>
-        <property name="pullDependencies">so:libbsd.so.0 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1nJdS9oVlnYhOY0Zt4yuTyc2FyTY=</property>
-        <property name="gitCommitOfApkPort">27cf05f3f054c20dc23398592e8c2d4feb79e7f2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxext</name>
-      <version>1.3.4-r0</version>
-      <description>X11 miscellaneous extensions library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxext:libxext:1.3.4-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxext@1.3.4-r0?arch=x86_64&amp;upstream=libxext&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libxext</property>
-        <property name="size">26329</property>
-        <property name="installedSize">86016</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q12mVwgfCLoI5JhlrLmSUcMKTd7xQ=</property>
-        <property name="gitCommitOfApkPort">6070123eeaa51c59cc7f9ed0ca724b4ee1d1004f</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxext</name>
-      <version>1.3.4-r0</version>
-      <description>X11 miscellaneous extensions library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxext:libxext:1.3.4-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxext@1.3.4-r0?arch=x86_64&amp;upstream=libxext&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libxext</property>
-        <property name="size">26329</property>
-        <property name="installedSize">86016</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q12mVwgfCLoI5JhlrLmSUcMKTd7xQ=</property>
-        <property name="gitCommitOfApkPort">6070123eeaa51c59cc7f9ed0ca724b4ee1d1004f</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxi</name>
-      <version>1.7.10-r0</version>
-      <description>X11 Input extension library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-        <license>
-          <id>X11</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxi:libxi:1.7.10-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxi@1.7.10-r0?arch=x86_64&amp;upstream=libxi&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.x.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libxi</property>
-        <property name="size">26810</property>
-        <property name="installedSize">77824</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libXext.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q10eUhj5MnXZmRuDb2B/xTCw66qz8=</property>
-        <property name="gitCommitOfApkPort">ba3bfac83884468db3f3900ac8be88b626fbc9fb</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxi</name>
-      <version>1.7.10-r0</version>
-      <description>X11 Input extension library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-        <license>
-          <id>X11</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:libxi:libxi:1.7.10-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxi@1.7.10-r0?arch=x86_64&amp;upstream=libxi&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.x.org</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libxi</property>
-        <property name="size">26810</property>
-        <property name="installedSize">77824</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libXext.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q10eUhj5MnXZmRuDb2B/xTCw66qz8=</property>
-        <property name="gitCommitOfApkPort">ba3bfac83884468db3f3900ac8be88b626fbc9fb</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxrender</name>
-      <version>0.9.10-r3</version>
-      <description>X Rendering Extension client library</description>
-      <cpe>cpe:2.3:a:libxrender:libxrender:0.9.10-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxrender@0.9.10-r3?arch=x86_64&amp;upstream=libxrender&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libxrender</property>
-        <property name="size">16426</property>
-        <property name="installedSize">57344</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1gZBny/5cDB1cvf+ZRyzMRvzQY1M=</property>
-        <property name="gitCommitOfApkPort">63d6d77cb519d79e4647e592d68d9ce1dcb11036</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxrender</name>
-      <version>0.9.10-r3</version>
-      <description>X Rendering Extension client library</description>
-      <cpe>cpe:2.3:a:libxrender:libxrender:0.9.10-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxrender@0.9.10-r3?arch=x86_64&amp;upstream=libxrender&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://xorg.freedesktop.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libxrender</property>
-        <property name="size">16426</property>
-        <property name="installedSize">57344</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1gZBny/5cDB1cvf+ZRyzMRvzQY1M=</property>
-        <property name="gitCommitOfApkPort">63d6d77cb519d79e4647e592d68d9ce1dcb11036</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxtst</name>
-      <version>1.2.3-r3</version>
-      <description>X11 Testing -- Resource extension library</description>
-      <cpe>cpe:2.3:a:libxtst:libxtst:1.2.3-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxtst@1.2.3-r3?arch=x86_64&amp;upstream=libxtst&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://wiki.freedesktop.org/xorg/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">libxtst</property>
-        <property name="size">10153</property>
-        <property name="installedSize">40960</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libXext.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1LxYnVswF+nlt2baz4T+ybk7dZ54=</property>
-        <property name="gitCommitOfApkPort">299eb6e190d5392d92ed544344f975f6016a655f</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>libxtst</name>
-      <version>1.2.3-r3</version>
-      <description>X11 Testing -- Resource extension library</description>
-      <cpe>cpe:2.3:a:libxtst:libxtst:1.2.3-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/libxtst@1.2.3-r3?arch=x86_64&amp;upstream=libxtst&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://wiki.freedesktop.org/xorg/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">libxtst</property>
-        <property name="size">10153</property>
-        <property name="installedSize">40960</property>
-        <property name="pullDependencies">so:libX11.so.6 so:libXext.so.6 so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1LxYnVswF+nlt2baz4T+ybk7dZ54=</property>
-        <property name="gitCommitOfApkPort">299eb6e190d5392d92ed544344f975f6016a655f</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>com.google.guava</group>
-      <name>listenablefuture</name>
-      <version>9999.0-empty-to-avoid-conflict-with-guava</version>
-      <cpe>cpe:2.3:a:listenablefuture:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">com.google.guava</property>
-        <property name="artifactID">listenablefuture</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>org.apache.logging.log4j</group>
-      <name>log4j-api</name>
-      <version>2.14.0</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:log4j-api:2.14.0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/org.apache.logging.log4j/log4j-api@2.14.0</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">org.apache.logging.log4j</property>
-        <property name="artifactID">log4j-api</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>org.apache.logging.log4j</group>
-      <name>log4j-core</name>
-      <version>2.14.0</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:log4j-core:2.14.0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/org.apache.logging.log4j/log4j-core@2.14.0</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">org.apache.logging.log4j</property>
-        <property name="artifactID">log4j-core</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>ch.qos.logback</group>
-      <name>logback-classic</name>
-      <version>1.1.2</version>
-      <cpe>cpe:2.3:a:logback-classic:logback-classic:1.1.2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/ch.qos.logback/logback-classic@1.1.2</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">ch.qos.logback</property>
-        <property name="artifactID">logback-classic</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>ch.qos.logback</group>
-      <name>logback-core</name>
-      <version>1.1.2</version>
-      <cpe>cpe:2.3:a:logback-core:logback-core:1.1.2:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/ch.qos.logback/logback-core@1.1.2</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">ch.qos.logback</property>
-        <property name="artifactID">logback-core</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teräs &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>musl</name>
-      <version>1.2.2-r3</version>
-      <description>the musl c library (libc) implementation</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:musl:musl:1.2.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/musl@1.2.2-r3?arch=x86_64&amp;upstream=musl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://musl.libc.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">musl</property>
-        <property name="size">382765</property>
-        <property name="installedSize">622592</property>
-        <property name="pullChecksum">Q1n4yypJ4tpU5g+jxI7oHT0Bm4Xjo=</property>
-        <property name="gitCommitOfApkPort">1e9cba35059e3bb4635f12ee7e10dfe687df31ad</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teräs &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>musl</name>
-      <version>1.2.2-r3</version>
-      <description>the musl c library (libc) implementation</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:musl:musl:1.2.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/musl@1.2.2-r3?arch=x86_64&amp;upstream=musl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://musl.libc.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">musl</property>
-        <property name="size">382765</property>
-        <property name="installedSize">622592</property>
-        <property name="pullChecksum">Q1n4yypJ4tpU5g+jxI7oHT0Bm4Xjo=</property>
-        <property name="gitCommitOfApkPort">1e9cba35059e3bb4635f12ee7e10dfe687df31ad</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teräs &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>musl</name>
-      <version>1.2.2-r3</version>
-      <description>the musl c library (libc) implementation</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:musl:musl:1.2.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/musl@1.2.2-r3?arch=x86_64&amp;upstream=musl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://musl.libc.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">musl</property>
-        <property name="size">382765</property>
-        <property name="installedSize">622592</property>
-        <property name="pullChecksum">Q1n4yypJ4tpU5g+jxI7oHT0Bm4Xjo=</property>
-        <property name="gitCommitOfApkPort">1e9cba35059e3bb4635f12ee7e10dfe687df31ad</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teräs &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>musl-utils</name>
-      <version>1.2.2-r3</version>
-      <description>the musl c library (libc) implementation</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:musl-utils:musl-utils:1.2.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/musl-utils@1.2.2-r3?arch=x86_64&amp;upstream=musl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://musl.libc.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">musl</property>
-        <property name="size">36662</property>
-        <property name="installedSize">147456</property>
-        <property name="pullDependencies">scanelf so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1WNvvoHVxRySUmjgvqQie71lLRd8=</property>
-        <property name="gitCommitOfApkPort">1e9cba35059e3bb4635f12ee7e10dfe687df31ad</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teräs &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>musl-utils</name>
-      <version>1.2.2-r3</version>
-      <description>the musl c library (libc) implementation</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:musl-utils:musl-utils:1.2.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/musl-utils@1.2.2-r3?arch=x86_64&amp;upstream=musl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://musl.libc.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">musl</property>
-        <property name="size">36662</property>
-        <property name="installedSize">147456</property>
-        <property name="pullDependencies">scanelf so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1WNvvoHVxRySUmjgvqQie71lLRd8=</property>
-        <property name="gitCommitOfApkPort">1e9cba35059e3bb4635f12ee7e10dfe687df31ad</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Timo Teräs &lt;timo.teras@iki.fi&gt;</publisher>
-      <name>musl-utils</name>
-      <version>1.2.2-r3</version>
-      <description>the musl c library (libc) implementation</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:musl-utils:musl-utils:1.2.2-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/musl-utils@1.2.2-r3?arch=x86_64&amp;upstream=musl&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://musl.libc.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">musl</property>
-        <property name="size">36662</property>
-        <property name="installedSize">147456</property>
-        <property name="pullDependencies">scanelf so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1WNvvoHVxRySUmjgvqQie71lLRd8=</property>
-        <property name="gitCommitOfApkPort">1e9cba35059e3bb4635f12ee7e10dfe687df31ad</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>scanelf</name>
-      <version>1.3.2-r0</version>
-      <description>Scan ELF binaries for stuff</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:scanelf:scanelf:1.3.2-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/scanelf@1.3.2-r0?arch=x86_64&amp;upstream=pax-utils&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">pax-utils</property>
-        <property name="size">36511</property>
-        <property name="installedSize">94208</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1OWKo0fmUbClrhW0CPNjwA8AMLWo=</property>
-        <property name="gitCommitOfApkPort">4c7f72840f5052bc63af1796c3ad0021f97949f2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>scanelf</name>
-      <version>1.3.2-r0</version>
-      <description>Scan ELF binaries for stuff</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:scanelf:scanelf:1.3.2-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/scanelf@1.3.2-r0?arch=x86_64&amp;upstream=pax-utils&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">pax-utils</property>
-        <property name="size">36511</property>
-        <property name="installedSize">94208</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1OWKo0fmUbClrhW0CPNjwA8AMLWo=</property>
-        <property name="gitCommitOfApkPort">4c7f72840f5052bc63af1796c3ad0021f97949f2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>scanelf</name>
-      <version>1.3.2-r0</version>
-      <description>Scan ELF binaries for stuff</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:scanelf:scanelf:1.3.2-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/scanelf@1.3.2-r0?arch=x86_64&amp;upstream=pax-utils&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">pax-utils</property>
-        <property name="size">36511</property>
-        <property name="installedSize">94208</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1OWKo0fmUbClrhW0CPNjwA8AMLWo=</property>
-        <property name="gitCommitOfApkPort">4c7f72840f5052bc63af1796c3ad0021f97949f2</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>service</name>
-      <version></version>
-      <cpe>cpe:2.3:a:service:service:*:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>servlet-api</name>
-      <version>4.0.FR</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-servlet-api:4.0.FR:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/servlet-api.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <group>org.slf4j</group>
-      <name>slf4j-api</name>
-      <version>1.7.6</version>
-      <cpe>cpe:2.3:a:slf4j-api:slf4j-api:1.7.6:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:maven/org.slf4j/slf4j-api@1.7.6</purl>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-        <property name="groupID">org.slf4j</property>
-        <property name="artifactID">slf4j-api</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>ssl_client</name>
-      <version>1.33.1-r6</version>
-      <description>EXternal ssl_client for busybox wget</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:ssl-client:ssl-client:1.33.1-r6:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/ssl_client@1.33.1-r6?arch=x86_64&amp;upstream=busybox&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://busybox.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">busybox</property>
-        <property name="size">4388</property>
-        <property name="installedSize">28672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libtls.so.2</property>
-        <property name="pullChecksum">Q1/SQVtc2JBIZBAN4fAVbG1AyqZT4=</property>
-        <property name="gitCommitOfApkPort">b08c19fd29b302ab411d43e52855cec047fd3803</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>ssl_client</name>
-      <version>1.33.1-r6</version>
-      <description>EXternal ssl_client for busybox wget</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:ssl-client:ssl-client:1.33.1-r6:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/ssl_client@1.33.1-r6?arch=x86_64&amp;upstream=busybox&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://busybox.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">busybox</property>
-        <property name="size">4388</property>
-        <property name="installedSize">28672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libtls.so.2</property>
-        <property name="pullChecksum">Q1/SQVtc2JBIZBAN4fAVbG1AyqZT4=</property>
-        <property name="gitCommitOfApkPort">b08c19fd29b302ab411d43e52855cec047fd3803</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>ssl_client</name>
-      <version>1.33.1-r6</version>
-      <description>EXternal ssl_client for busybox wget</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:ssl-client:ssl-client:1.33.1-r6:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/ssl_client@1.33.1-r6?arch=x86_64&amp;upstream=busybox&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://busybox.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">busybox</property>
-        <property name="size">4388</property>
-        <property name="installedSize">28672</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1 so:libtls.so.2</property>
-        <property name="pullChecksum">Q1/SQVtc2JBIZBAN4fAVbG1AyqZT4=</property>
-        <property name="gitCommitOfApkPort">b08c19fd29b302ab411d43e52855cec047fd3803</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>stax-api</name>
-      <version>1.0-2</version>
-      <cpe>cpe:2.3:a:stax-api:stax-api:1.0-2:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/webapps/service.war</property>
-        <property name="layerID">sha256:0ac2ebd095e49cdac3f642472da53dabfc7fb4ba710fb91fac34b649bcb550d5</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-api</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-api:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-api.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-coyote</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-coyote:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-coyote.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-dbcp</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-dbcp:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-dbcp.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-cs</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-cs:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-cs.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-de</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-de:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-de.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-es</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-es:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-es.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-fr</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-fr:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-fr.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-ja</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-ja:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-ja.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-ko</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-ko:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-ko.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-pt-BR</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-pt-BR:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-pt-BR.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-ru</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-ru:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-ru.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-i18n-zh-CN</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-i18n-zh-CN:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-i18n-zh-CN.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-jdbc</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:tomcat-jdbc:tomcat-jdbc:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-jdbc.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-jni</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-jni:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-jni.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-juli</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-juli:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/bin/tomcat-juli.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Jakub Jirutka &lt;jakub@jirutka.cz&gt;</publisher>
-      <name>tomcat-native</name>
-      <version>1.2.30-r0</version>
-      <description>Native resources optional component for Apache Tomcat</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:tomcat-native:tomcat-native:1.2.30-r0:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/tomcat-native@1.2.30-r0?arch=x86_64&amp;upstream=tomcat-native&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://tomcat.apache.org/native-doc/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">tomcat-native</property>
-        <property name="size">63075</property>
-        <property name="installedSize">188416</property>
-        <property name="pullDependencies">so:libapr-1.so.0 so:libc.musl-x86_64.so.1 so:libcrypto.so.1.1 so:libssl.so.1.1</property>
-        <property name="pullChecksum">Q1ETFK4dQnWOkHHinz0TzxD2tAfbU=</property>
-        <property name="gitCommitOfApkPort">ee6d2c2b0db660f230bb34a2a60bd8d0be259781</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-util</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-util:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-util.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-util-scan</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-util-scan:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-util-scan.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>tomcat-websocket</name>
-      <version>9.0.56</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-websocket:9.0.56:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/tomcat-websocket.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <name>websocket-api</name>
-      <version>1.1.FR</version>
-      <cpe>cpe:2.3:a:apache-software-foundation:tomcat-websocket-api:1.1.FR:*:*:*:*:*:*:*</cpe>
-      <properties>
-        <property name="foundBy">java-cataloger</property>
-        <property name="language">java</property>
-        <property name="type">java-archive</property>
-        <property name="metadataType">JavaMetadata</property>
-        <property name="path">/opt/apache-tomcat-9.0.56/lib/websocket-api.jar</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>zlib</name>
-      <version>1.2.11-r3</version>
-      <description>A compression/decompression Library</description>
-      <licenses>
-        <license>
-          <id>Zlib</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zlib:zlib:1.2.11-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zlib@1.2.11-r3?arch=x86_64&amp;upstream=zlib&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://zlib.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">zlib</property>
-        <property name="size">51398</property>
-        <property name="installedSize">110592</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1Sc/5gG4ey/zvnyPPQ/Au7bXqc08=</property>
-        <property name="gitCommitOfApkPort">388a4fb3640f8ccbd18e105df3ad741dca4247e1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>zlib</name>
-      <version>1.2.11-r3</version>
-      <description>A compression/decompression Library</description>
-      <licenses>
-        <license>
-          <id>Zlib</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zlib:zlib:1.2.11-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zlib@1.2.11-r3?arch=x86_64&amp;upstream=zlib&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://zlib.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d</property>
-        <property name="originPackage">zlib</property>
-        <property name="size">51398</property>
-        <property name="installedSize">110592</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1Sc/5gG4ey/zvnyPPQ/Au7bXqc08=</property>
-        <property name="gitCommitOfApkPort">388a4fb3640f8ccbd18e105df3ad741dca4247e1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Natanael Copa &lt;ncopa@alpinelinux.org&gt;</publisher>
-      <name>zlib</name>
-      <version>1.2.11-r3</version>
-      <description>A compression/decompression Library</description>
-      <licenses>
-        <license>
-          <id>Zlib</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zlib:zlib:1.2.11-r3:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zlib@1.2.11-r3?arch=x86_64&amp;upstream=zlib&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://zlib.net/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">zlib</property>
-        <property name="size">51398</property>
-        <property name="installedSize">110592</property>
-        <property name="pullDependencies">so:libc.musl-x86_64.so.1</property>
-        <property name="pullChecksum">Q1Sc/5gG4ey/zvnyPPQ/Au7bXqc08=</property>
-        <property name="gitCommitOfApkPort">388a4fb3640f8ccbd18e105df3ad741dca4247e1</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-ca-jre</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) CA JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-ca-jre:zulu17-ca-jre:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-ca-jre@17.0.1-r1?arch=x86_64&amp;upstream=zulu17-ca&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">zulu17-ca</property>
-        <property name="size">1239000</property>
-        <property name="installedSize">2695168</property>
-        <property name="pullDependencies">zulu17-ca-jre-headless=17.0.1-r1 so:libX11.so.6 so:libXext.so.6 so:libXi.so.6 so:libXrender.so.1 so:libXtst.so.6 so:libasound.so.2 so:libc.musl-x86_64.so.1 so:libz.so.1 so:zulu17-ca:libawt.so so:zulu17-ca:libfreetype.so so:zulu17-ca:libjava.so</property>
-        <property name="pullChecksum">Q1TDSyQ9+TowTcPj5cKBn8XQrSzHo=</property>
-        <property name="gitCommitOfApkPort">74047248094be632df61ee6a09c6fea5f6833f60-dirty</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-ca-jre</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) CA JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-ca-jre:zulu17-ca-jre:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-ca-jre@17.0.1-r1?arch=x86_64&amp;upstream=zulu17-ca&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">zulu17-ca</property>
-        <property name="size">1239000</property>
-        <property name="installedSize">2695168</property>
-        <property name="pullDependencies">zulu17-ca-jre-headless=17.0.1-r1 so:libX11.so.6 so:libXext.so.6 so:libXi.so.6 so:libXrender.so.1 so:libXtst.so.6 so:libasound.so.2 so:libc.musl-x86_64.so.1 so:libz.so.1 so:zulu17-ca:libawt.so so:zulu17-ca:libfreetype.so so:zulu17-ca:libjava.so</property>
-        <property name="pullChecksum">Q1TDSyQ9+TowTcPj5cKBn8XQrSzHo=</property>
-        <property name="gitCommitOfApkPort">74047248094be632df61ee6a09c6fea5f6833f60-dirty</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-ca-jre-headless</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) CA Headless JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-ca-jre-headless:zulu17-ca-jre-headless:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-ca-jre-headless@17.0.1-r1?arch=x86_64&amp;upstream=zulu17-ca&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">zulu17-ca</property>
-        <property name="size">60805753</property>
-        <property name="installedSize">182231040</property>
-        <property name="pullDependencies">java-common busybox so:libc.musl-x86_64.so.1 so:libz.so.1</property>
-        <property name="pullChecksum">Q1zanrlhh+9K8bACKd3CUAcGUU8bw=</property>
-        <property name="gitCommitOfApkPort">74047248094be632df61ee6a09c6fea5f6833f60-dirty</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-ca-jre-headless</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) CA Headless JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-ca-jre-headless:zulu17-ca-jre-headless:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-ca-jre-headless@17.0.1-r1?arch=x86_64&amp;upstream=zulu17-ca&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">zulu17-ca</property>
-        <property name="size">60805753</property>
-        <property name="installedSize">182231040</property>
-        <property name="pullDependencies">java-common busybox so:libc.musl-x86_64.so.1 so:libz.so.1</property>
-        <property name="pullChecksum">Q1zanrlhh+9K8bACKd3CUAcGUU8bw=</property>
-        <property name="gitCommitOfApkPort">74047248094be632df61ee6a09c6fea5f6833f60-dirty</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-jre</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-jre:zulu17-jre:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-jre@17.0.1-r1?arch=x86_64&amp;upstream=zulu17&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">zulu17</property>
-        <property name="size">1223</property>
-        <property name="installedSize">4096</property>
-        <property name="pullDependencies">zulu17-jre-headless=17.0.1-r1 zulu17-ca-jre=17.0.1-r1</property>
-        <property name="pullChecksum">Q1eFEs9/0/xfsvtX8ZdMxg3AyiqGU=</property>
-        <property name="gitCommitOfApkPort">e10d54432b0b42035d49e45f7118191ca9d500e3-dirty</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-jre</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-jre:zulu17-jre:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-jre@17.0.1-r1?arch=x86_64&amp;upstream=zulu17&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">zulu17</property>
-        <property name="size">1223</property>
-        <property name="installedSize">4096</property>
-        <property name="pullDependencies">zulu17-jre-headless=17.0.1-r1 zulu17-ca-jre=17.0.1-r1</property>
-        <property name="pullChecksum">Q1eFEs9/0/xfsvtX8ZdMxg3AyiqGU=</property>
-        <property name="gitCommitOfApkPort">e10d54432b0b42035d49e45f7118191ca9d500e3-dirty</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-jre-headless</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) Headless JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-jre-headless:zulu17-jre-headless:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-jre-headless@17.0.1-r1?arch=x86_64&amp;upstream=zulu17&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:0593ff750f1e142e0ffdd7aeff5b38819a182be7549cd5e41b955edd89ce04b1</property>
-        <property name="originPackage">zulu17</property>
-        <property name="size">1224</property>
-        <property name="installedSize">4096</property>
-        <property name="pullDependencies">zulu17-ca-jre-headless=17.0.1-r1</property>
-        <property name="pullChecksum">Q1XMgjFV624vGZoY5CZw84QT3ZRY8=</property>
-        <property name="gitCommitOfApkPort">e10d54432b0b42035d49e45f7118191ca9d500e3-dirty</property>
-      </properties>
-    </component>
-    <component type="library">
-      <publisher>Azul Systems, Inc. &lt;azul_openjdk@azulsystems.com&gt;</publisher>
-      <name>zulu17-jre-headless</name>
-      <version>17.0.1-r1</version>
-      <description>Azul Zulu 17.30+15 (17.0.1-b12) Headless JRE</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-only</id>
-        </license>
-      </licenses>
-      <cpe>cpe:2.3:a:zulu17-jre-headless:zulu17-jre-headless:17.0.1-r1:*:*:*:*:*:*:*</cpe>
-      <purl>pkg:alpine/zulu17-jre-headless@17.0.1-r1?arch=x86_64&amp;upstream=zulu17&amp;distro=alpine-3.14.3</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://www.azul.com/products/core/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="foundBy">apkdb-cataloger</property>
-        <property name="type">apk</property>
-        <property name="metadataType">ApkMetadata</property>
-        <property name="path">/lib/apk/db/installed</property>
-        <property name="layerID">sha256:1eaa0601a9a7d3bd39049672692965dda48a2a6a263fe5a7d5f7676a57bc67e0</property>
-        <property name="originPackage">zulu17</property>
-        <property name="size">1224</property>
-        <property name="installedSize">4096</property>
-        <property name="pullDependencies">zulu17-ca-jre-headless=17.0.1-r1</property>
-        <property name="pullChecksum">Q1XMgjFV624vGZoY5CZw84QT3ZRY8=</property>
-        <property name="gitCommitOfApkPort">e10d54432b0b42035d49e45f7118191ca9d500e3-dirty</property>
-      </properties>
-    </component>
-    <component type="operating-system">
-      <name>Alpine Linux</name>
-      <version></version>
-      <externalReferences>
-        <reference type="issue-tracker">
-          <url>https://bugs.alpinelinux.org/</url>
-        </reference>
-        <reference type="website">
-          <url>https://alpinelinux.org/</url>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="prettyName">Alpine Linux v3.14</property>
-        <property name="id">alpine</property>
-        <property name="versionID">3.14.3</property>
-      </properties>
-    </component>
-  </components>
-</bom>
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.3",
+  "serialNumber": "urn:uuid:b92d294d-5af4-4791-a8ec-983c2c04a9bc",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2022-02-11T01:38:24-08:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.37.10"
+      }
+    ],
+    "component": {
+      "bom-ref": "af63bd4c8601b7f1",
+      "type": "file",
+      "name": ".",
+      "version": ""
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "asm",
+      "version": "3.1",
+      "cpe": "cpe:2.3:a:france-telecom-r\\\u0026d:asm:3.1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "commons-codec",
+      "name": "commons-codec",
+      "version": "1.6",
+      "cpe": "cpe:2.3:a:apache-software-foundation:commons-codec:1.6:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/commons-codec/commons-codec@1.6",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "commons-codec"
+        },
+        {
+          "name": "artifactID",
+          "value": "commons-codec"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "commons-logging",
+      "name": "commons-logging",
+      "version": "1.1.1",
+      "cpe": "cpe:2.3:a:apache-software-foundation:commons-logging:1.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/commons-logging/commons-logging@1.1.1",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "commons-logging"
+        },
+        {
+          "name": "artifactID",
+          "value": "commons-logging"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gradle-wrapper",
+      "version": "",
+      "cpe": "cpe:2.3:a:gradle-wrapper:gradle-wrapper:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "gradle/wrapper/gradle-wrapper.jar"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "18.0-rc1",
+      "cpe": "cpe:2.3:a:google:guava:18.0-rc1:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/com.google.guava/guava@18.0-rc1",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "com.google.guava"
+        },
+        {
+          "name": "artifactID",
+          "value": "guava"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpclient",
+      "version": "4.2.5",
+      "cpe": "cpe:2.3:a:apache-software-foundation:httpclient:4.2.5:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpclient@4.2.5",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "org.apache.httpcomponents"
+        },
+        {
+          "name": "artifactID",
+          "value": "httpclient"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpcore",
+      "version": "4.2.4",
+      "cpe": "cpe:2.3:a:apache-software-foundation:httpcore:4.2.4:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpcore@4.2.4",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "org.apache.httpcomponents"
+        },
+        {
+          "name": "artifactID",
+          "value": "httpcore"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-annotations",
+      "version": "2.13.1",
+      "cpe": "cpe:2.3:a:jackson-annotations:jackson-annotations:2.13.1:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.13.1",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "com.fasterxml.jackson.core"
+        },
+        {
+          "name": "artifactID",
+          "value": "jackson-annotations"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-core",
+      "version": "2.13.1",
+      "cpe": "cpe:2.3:a:jackson-core:jackson-core:2.13.1:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.13.1",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "com.fasterxml.jackson.core"
+        },
+        {
+          "name": "artifactID",
+          "value": "jackson-core"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-databind",
+      "version": "2.13.1",
+      "cpe": "cpe:2.3:a:jackson-databind:jackson-databind:2.13.1:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.1",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "com.fasterxml.jackson.core"
+        },
+        {
+          "name": "artifactID",
+          "value": "jackson-databind"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.sun.jersey",
+      "name": "jersey-core",
+      "version": "1.8",
+      "cpe": "cpe:2.3:a:oracle-corporation:jersey-core:1.8:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/com.sun.jersey/jersey-core@1.8",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "com.sun.jersey"
+        },
+        {
+          "name": "artifactID",
+          "value": "jersey-core"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.sun.jersey",
+      "name": "jersey-server",
+      "version": "1.8",
+      "cpe": "cpe:2.3:a:oracle-corporation:jersey-server:1.8:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/com.sun.jersey/jersey-server@1.8",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "com.sun.jersey"
+        },
+        {
+          "name": "artifactID",
+          "value": "jersey-server"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-classic",
+      "version": "1.2.0",
+      "cpe": "cpe:2.3:a:logback-classic:logback-classic:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.2.0",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "ch.qos.logback"
+        },
+        {
+          "name": "artifactID",
+          "value": "logback-classic"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-core",
+      "version": "1.2.0",
+      "cpe": "cpe:2.3:a:logback-core:logback-core:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.2.0",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "ch.qos.logback"
+        },
+        {
+          "name": "artifactID",
+          "value": "logback-core"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "service",
+      "version": "",
+      "cpe": "cpe:2.3:a:service:service:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.slf4j",
+      "name": "slf4j-api",
+      "version": "1.7.22",
+      "cpe": "cpe:2.3:a:slf4j-api:slf4j-api:1.7.22:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.slf4j/slf4j-api@1.7.22",
+      "properties": [
+        {
+          "name": "foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "language",
+          "value": "java"
+        },
+        {
+          "name": "type",
+          "value": "java-archive"
+        },
+        {
+          "name": "metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "path",
+          "value": "build/libs/service.war"
+        },
+        {
+          "name": "groupID",
+          "value": "org.slf4j"
+        },
+        {
+          "name": "artifactID",
+          "value": "slf4j-api"
+        }
+      ]
+    }
+  ]
+}

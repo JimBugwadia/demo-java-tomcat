@@ -54,19 +54,10 @@ jobs:
         tags: |
           type=raw,value=v1
 
-    - name: Build Docker image
-      id: docker-build-push
-      uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-      with:
-        context: .
-        push: false
-        tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
-
     - name: Scan for vulnerabilities
       uses: anchore/scan-action@v3
       with:
-        image: ${{ steps.meta.outputs.tags }}
+        path: .
         fail-build: true
         severity-cutoff: critical
         
