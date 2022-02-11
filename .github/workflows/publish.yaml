@@ -6,6 +6,8 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  GRYPE_FILE: scan.json
+  GRYPE_OUTPUT: cyclonedx
 
 jobs:
   build:
@@ -58,6 +60,12 @@ jobs:
         push: false
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Scan for vulnerabilities
+      uses: anchore/scan-action@v3
+      with:
+        image: "localbuild/testimage:latest"
+        fail-build: true
 
     - name: Generate SBOM
       uses: anchore/sbom-action@v0.6.0
