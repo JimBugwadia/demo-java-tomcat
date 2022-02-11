@@ -90,20 +90,20 @@ jobs:
         -a "repo=${{ github.repository }}" \
         -a "workflow=${{ github.workflow }}" \
         -a "ref=${{ github.sha }}" \
-        ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
+        ${{ steps.meta.outputs.tags }}
 
     - name : Attest SBOM
       env:
         COSIGN_EXPERIMENTAL: "true"
-      run: cosign attest --force --replace --predicate sbom.json --type https://cyclonedx.org/bom  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
+      run: cosign attest --force --replace --predicate sbom.json --type https://cyclonedx.org/bom  ${{ steps.meta.outputs.tags }}
 
     - name : Attest Vulnerability Scan
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
+      run: cosign attest --force --replace --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}
 
     - name : Attest Provenance
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
+      run: cosign attest --force --replace --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}
 
