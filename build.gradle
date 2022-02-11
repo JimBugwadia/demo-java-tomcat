@@ -25,14 +25,14 @@ repositories {
 dependencies {	    
 	compile 'com.sun.jersey:jersey-server:1.8'
 	
-	compile 'com.fasterxml.jackson.core:jackson-databind:2.2.0'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
 	compile 'com.google.guava:guava:18.0-rc1'
 	
 	compile 'org.apache.httpcomponents:httpclient:4.2.5'	
 	
 	compile 'org.slf4j:slf4j-api:1.6.4'
-	compile 'ch.qos.logback:logback-classic:1.1.2'
-	compile 'ch.qos.logback:logback-core:1.1.2'	
+	compile 'ch.qos.logback:logback-classic:1.2.0'
+	compile 'ch.qos.logback:logback-core:1.2.0'	
 }
 
 task copyWar(type: Copy) {
