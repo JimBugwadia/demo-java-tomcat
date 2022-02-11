@@ -95,15 +95,15 @@ jobs:
     - name : Attest SBOM
       env:
         COSIGN_EXPERIMENTAL: "true"
-      run: cosign attest --force --replace --predicate sbom.json --type https://cyclonedx.org/bom  ${{ steps.meta.outputs.tags }}
+      run: cosign attest --force --predicate sbom.json --type https://cyclonedx.org/bom  ${{ steps.meta.outputs.tags }}
 
     - name : Attest Vulnerability Scan
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}
+      run: cosign attest --force --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}
 
     - name : Attest Provenance
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}
+      run: cosign attest --force --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}
 
