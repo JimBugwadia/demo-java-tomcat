@@ -64,7 +64,7 @@ jobs:
     - name: Scan for vulnerabilities
       uses: anchore/scan-action@v3
       with:
-        image: "localbuild/testimage:latest"
+        image: ${{ steps.meta.outputs.tags }}
         fail-build: true
 
     - name: Generate SBOM
