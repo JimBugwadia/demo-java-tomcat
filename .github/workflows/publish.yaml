@@ -10,7 +10,7 @@ env:
   GRYPE_QUIET: true
 
 jobs:
-  build:
+  secure-build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -90,14 +90,14 @@ jobs:
         -a "repo=${{ github.repository }}" \
         -a "workflow=${{ github.workflow }}" \
         -a "ref=${{ github.sha }}" \
-        ${{ steps.meta.outputs.tags }}@sha256:${{ steps.docker-build-push.outputs.digest }}
+        ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
     - name : Attest SBOM
-      run: cosign attest --predicate sbom.json --type https://cyclonedx.org/bom  ${{ steps.meta.outputs.tags }}@sha256:${{ steps.docker-build-push.outputs.digest }}
+      run: cosign attest --predicate sbom.json --type https://cyclonedx.org/bom  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
     - name : Attest Vulnerability Scan
-      run: cosign attest --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}@sha256:${{ steps.docker-build-push.outputs.digest }}
+      run: cosign attest --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
     - name : Attest Provenance
-      run: cosign attest --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}@sha256:${{ steps.docker-build-push.outputs.digest }}
+      run: cosign attest --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
 
