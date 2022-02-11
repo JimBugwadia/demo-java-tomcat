@@ -65,9 +65,8 @@ jobs:
       uses: anchore/scan-action@v3
       with:
         image: ${{ steps.meta.outputs.tags }}
-        severity-cutoff: critical
         fail-build: false
-        fail-on-severity: ''
+        severity-cutoff: ""
         
     - name: Generate SBOM
       uses: anchore/sbom-action@v0.6.0
