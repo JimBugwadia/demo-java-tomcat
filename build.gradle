@@ -1,0 +1,52 @@
+plugins {
+	id 'com.palantir.docker' version '0.20.1'
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+sourceCompatibility = 1.8
+
+war {
+   baseName = 'service'
+}
+
+repositories { 
+	mavenCentral()
+}
+
+dependencies {	    
+	compile 'com.sun.jersey:jersey-server:1.8'
+	
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.2.0'
+	compile 'com.google.guava:guava:18.0-rc1'
+	
+	compile 'org.apache.httpcomponents:httpclient:4.2.5'	
+	
+	compile 'org.slf4j:slf4j-api:1.6.4'
+	compile 'ch.qos.logback:logback-classic:1.1.2'
+	compile 'ch.qos.logback:logback-core:1.1.2'	
+}
+
+task copyWar(type: Copy) {
+    from war
+    into "${projectDir}/../build"
+}
+
+tasks.build.doLast() {
+	copyWar.finalizedBy()
+}
+
+docker {
+    name "$SERVICE_REPO/$SERVICE_NAME:$SERVICE_TAG"
+    println "building image $name"
+    tags "$SERVICE_TAG"
+    dockerfile file("${projectDir}/Dockerfile")
+	copySpec.from("${projectDir}/build/libs/${war.baseName}.war").into(".")
+    pull true
+    noCache true
+}
+
+build.dependsOn(war)
+docker.dependsOn(build)
