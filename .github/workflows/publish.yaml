@@ -125,7 +125,8 @@ jobs:
 
   sign-image-attestations:
     runs-on: ubuntu-latest
-    needs: [build-image, scan-image, generate-sbom]
+    needs: [scan-image, generate-sbom]
+    #needs: [build-image, scan-image, generate-sbom]
     permissions:
       contents: read
       packages: write
