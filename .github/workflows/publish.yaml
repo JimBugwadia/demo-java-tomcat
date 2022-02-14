@@ -86,11 +86,14 @@ jobs:
         scan-type: 'image'
         image-ref: ${{ env.REPO }}
         format: 'json'
-        exit-code: '1'
         ignore-unfixed: true
         vuln-type: 'os,library'
         output: scan.json
-        severity: 'CRITICAL,HIGH'
+
+    - name: Add scan metadata
+      uses: sergeysova/jq-action@v2
+      with:
+        cmd: cat scan.json | jq '. + {timestamp:(now|todateiso8601)}' | jq '. + {scanner:"trivy"}' > scan.json
 
     - name: Upload vulnerability scan report
       uses: actions/upload-artifact@v2
@@ -162,9 +165,9 @@ jobs:
       with:
         name: scan.json
 
-    - uses: actions/download-artifact@master
-      with:
-        name: provenance.json
+    # - uses: actions/download-artifact@master
+    #   with:
+    #     name: provenance.json
 
     - name: Install Cosign
       uses: sigstore/cosign-installer@v2.0.0
@@ -200,8 +203,8 @@ jobs:
         COSIGN_EXPERIMENTAL: "true"    
       run: cosign attest --force --predicate scan.json --type https://grype.anchore.com/scan  ${{ steps.meta.outputs.tags }}
 
-    - name : Attest Provenance
-      env:
-        COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}
+    # - name : Attest Provenance
+    #   env:
+    #     COSIGN_EXPERIMENTAL: "true"    
+    #   run: cosign attest --force --predicate provenance.json --type https://example.com/provenance  ${{ steps.meta.outputs.tags }}
 
