@@ -48,5 +48,6 @@ spec:
               - key: "{{ Results[].Vulnerabilities[?CVSS.redhat.V3Score > `8.0`][] | length(@) }}"
                 operator: Equals
                 value: 0
+          # check build provenance data was provided
           - predicateType: https://example.com/provenance/v1
 

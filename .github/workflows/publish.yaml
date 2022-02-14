@@ -88,18 +88,18 @@ jobs:
         format: 'json'
         ignore-unfixed: true
         vuln-type: 'os,library'
-        output: scan.json
+        output: trivy-scan.json
 
     - name: Add scan metadata
       uses: sergeysova/jq-action@v2
       with:
-        cmd: cat scan.json | jq '. + {timestamp:(now|todateiso8601)}' | jq '. + {scanner:"trivy"}' > scan-enriched.json
+        cmd: cat trivy-scan.json | jq '. + {timestamp:(now|todateiso8601)}' | jq '. + {scanner:"trivy"}' > scan.json
 
     - name: Upload vulnerability scan report
       uses: actions/upload-artifact@v2
       with:
         name: scan.json
-        path: scan-enriched.json
+        path: scan.json
         if-no-files-found: error
 
   # scan-image:
