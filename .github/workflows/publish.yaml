@@ -117,7 +117,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: sbom.json
-        path: sbom.json
+        path: /tmp/${{ env.GITHUB_ACTION }}/sbom.json
         if-no-files-found: error
 
   sign-image-attestations:
