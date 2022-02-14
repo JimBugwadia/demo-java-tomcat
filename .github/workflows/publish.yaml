@@ -131,17 +131,14 @@ jobs:
     - uses: actions/download-artifact@master
       with:
         name: sbom.json
-        if-no-files-found: error
 
     - uses: actions/download-artifact@master
       with:
         name: scan.json
-        if-no-files-found: error
 
     - uses: actions/download-artifact@master
       with:
         name: provenance.json
-        if-no-files-found: error
 
     - name: Install Cosign
       uses: sigstore/cosign-installer@v2.0.0
