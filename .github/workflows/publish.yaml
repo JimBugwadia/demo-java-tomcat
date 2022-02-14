@@ -74,10 +74,15 @@ jobs:
       contents: read
     steps:
 
+    - name: Get Repository
+      run: |
+        export GITHUB_REPOSITORY=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+        echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+
     - name: Scan for vulnerabilities
       uses: anchore/scan-action@v3
       with:
-        image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+        image: ${{ env.REPO }}
         fail-build: true
         severity-cutoff: critical
 
@@ -94,10 +99,15 @@ jobs:
       contents: read
     steps:
 
+    - name: Get Repository
+      run: |
+        export GITHUB_REPOSITORY=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+        echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+
     - name: Generate SBOM
       uses: anchore/sbom-action@v0.6.0
       with:
-        image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+        image: ${{ env.REPO }}
         artifact-name: sbom.json
         format: cyclonedx-json
 
@@ -133,6 +143,15 @@ jobs:
       with:
         cosign-release: 'v1.5.1'
 
+    # TODO GET DIGEST
+    - name: Get Repository
+      run: |
+        export GITHUB_REPOSITORY=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+        echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+
+
+    # TODO SIGN WITH DIGEST
+    
     - name: Sign image
       env:
         COSIGN_EXPERIMENTAL: "true"
@@ -141,7 +160,7 @@ jobs:
         -a "repo=${{ github.repository }}" \
         -a "workflow=${{ github.workflow }}" \
         -a "ref=${{ github.sha }}" \
-        ${{ steps.meta.outputs.tags }}
+        ${{ env.REPO }}
 
     - name : Attest SBOM
       env:
