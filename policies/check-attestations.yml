@@ -36,7 +36,7 @@ spec:
           # check that a vulnerability scan report is provided, and:
           # 1. Trivy was used to scan the image
           # 2. No vulnerabilities with a score above 8 exist 
-          - predicateType: https://grype.anchore.com/scan
+          - predicateType: https://trivy.aquasec.com/scan/v2
             conditions:
             - all:
               - key: "{{ scanner }}"
@@ -48,5 +48,5 @@ spec:
               - key: "{{ Results[].Vulnerabilities[?CVSS.redhat.V3Score > `8.0`][] | length(@) }}"
                 operator: Equals
                 value: 0
-          - predicateType: https://example.com/provenance
+          - predicateType: https://example.com/provenance/v1
 
