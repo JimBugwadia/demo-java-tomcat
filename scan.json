@@ -316,7 +316,8 @@
      "https://lists.apache.org/thread.html/r0a75b8f0f72f3e18442dc56d33f3827b905f2fe5b7ba48997436f5d1@%3Cissues.solr.apache.org%3E",
      "https://www.oracle.com/security-alerts/cpuoct2021.html",
      "https://lists.apache.org/thread.html/r69a94e2f302d1b778bdfefe90fcb4b8c50b226438c3c8c1d0de85a19@%3Cdev.ranger.apache.org%3E",
-     "https://www.oracle.com/security-alerts/cpujan2022.html"
+     "https://www.oracle.com/security-alerts/cpujan2022.html",
+     "https://security.netapp.com/advisory/ntap-20220210-0002/"
     ],
     "description": "Apache HttpClient versions prior to version 4.5.13 and 5.0.3 can misinterpret malformed authority component in request URIs passed to the library as java.net.URI object and pick the wrong target host for request execution.",
     "cvss": [
@@ -439,7 +440,8 @@
      "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97@%3Cissues.geode.apache.org%3E",
      "https://www.oracle.com/security-alerts/cpuoct2021.html",
      "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf@%3Cdev.pig.apache.org%3E",
-     "https://www.oracle.com/security-alerts/cpujan2022.html"
+     "https://www.oracle.com/security-alerts/cpujan2022.html",
+     "https://security.netapp.com/advisory/ntap-20220210-0003/"
     ],
     "description": "A temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime's java.io.tmpdir system property to point to a location whose permissions are appropriately configured.",
     "cvss": [
@@ -576,7 +578,8 @@
       "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97@%3Cissues.geode.apache.org%3E",
       "https://www.oracle.com/security-alerts/cpuoct2021.html",
       "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf@%3Cdev.pig.apache.org%3E",
-      "https://www.oracle.com/security-alerts/cpujan2022.html"
+      "https://www.oracle.com/security-alerts/cpujan2022.html",
+      "https://security.netapp.com/advisory/ntap-20220210-0003/"
      ],
      "description": "A temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime's java.io.tmpdir system property to point to a location whose permissions are appropriately configured.",
      "cvss": [
@@ -819,7 +822,8 @@
       "https://lists.apache.org/thread.html/r0a75b8f0f72f3e18442dc56d33f3827b905f2fe5b7ba48997436f5d1@%3Cissues.solr.apache.org%3E",
       "https://www.oracle.com/security-alerts/cpuoct2021.html",
       "https://lists.apache.org/thread.html/r69a94e2f302d1b778bdfefe90fcb4b8c50b226438c3c8c1d0de85a19@%3Cdev.ranger.apache.org%3E",
-      "https://www.oracle.com/security-alerts/cpujan2022.html"
+      "https://www.oracle.com/security-alerts/cpujan2022.html",
+      "https://security.netapp.com/advisory/ntap-20220210-0002/"
      ],
      "description": "Apache HttpClient versions prior to version 4.5.13 and 5.0.3 can misinterpret malformed authority component in request URIs passed to the library as java.net.URI object and pick the wrong target host for request execution.",
      "cvss": [
@@ -1300,10 +1304,10 @@
    }
   },
   "db": {
-   "built": "2022-02-11T08:16:08Z",
+   "built": "2022-02-13T08:17:37Z",
    "schemaVersion": 3,
    "location": "/home/jim/.cache/grype/db/3",
-   "checksum": "sha256:6bfd54acfa013a3c2d95b5d3e86a9811a93b3bb9cf9d67bf290d9aefc3c3d464",
+   "checksum": "sha256:ca8083029e097319f7bac8a8a1125abcae8bda703737feb07d3046aace26c06a",
    "error": null
   }
  }
