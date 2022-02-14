@@ -90,6 +90,7 @@ jobs:
         ignore-unfixed: true
         vuln-type: 'os,library'
         output: /tmp/scan.json
+        severity: 'CRITICAL,HIGH'
 
     - name: Upload vulnerability scan report
       uses: actions/upload-artifact@v2
