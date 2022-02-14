@@ -202,12 +202,12 @@ jobs:
     - name : Attest SBOM
       env:
         COSIGN_EXPERIMENTAL: "true"
-      run: cosign attest --force --predicate sbom.json --type https://cyclonedx.org/bom  ${{ env.REPO }}
+      run: cosign attest --force --predicate sbom.json --type https://cyclonedx.org/BOM/v1  ${{ env.REPO }}
 
     - name : Attest Vulnerability Scan
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --predicate scan.json --type https://grype.anchore.com/scan  ${{ env.REPO }}
+      run: cosign attest --force --predicate scan.json --type https://trivy.aquasec.com/scan/v2  ${{ env.REPO }}
 
     # - name : Attest Provenance
     #   env:
