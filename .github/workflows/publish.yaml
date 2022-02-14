@@ -10,12 +10,54 @@ env:
   GRYPE_QUIET: true
 
 jobs:
-  secure-build:
+
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Scan for vulnerabilities
+      uses: anchore/scan-action@v3
+      with:
+        path: .
+        fail-build: true
+        severity-cutoff: critical
+
+    - name: Upload vulnerability scan report
+      uses: actions/upload-artifact@v2
+      with:
+        name: scan.json
+        path: scan.json
+
+  generate-sbom:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Generate SBOM
+      uses: anchore/sbom-action@v0.6.0
+      with:
+        image: ${{ steps.meta.outputs.tags }}
+        artifact-name: sbom.json
+        format: cyclonedx-json
+
+    - name: Upload SBOM
+      uses: actions/upload-artifact@v2
+      with:
+        name: sbom.json
+        path: sbom.json
+
+  build-image:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-      id-token: write   # This is the key for OIDC!
 
     steps:
     - uses: actions/checkout@v2
@@ -30,14 +72,17 @@ jobs:
     - name: Execute Gradle build
       run: ./gradlew build
 
-    - name: Download build artifact
-      uses: actions/download-artifact@v2
-
     - name: Generate provenance
       uses: slsa-framework/github-actions-demo@v0.1
       with:
         artifact_path: build/libs/service.war
         output_path: provenance.json
+
+    - name: Upload provenance
+      uses: actions/upload-artifact@v2
+      with:
+        name: provenance.json
+        path: provenance.json
 
     - name: Log in to the Container registry
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
@@ -54,20 +99,6 @@ jobs:
         tags: |
           type=raw,value=v1
 
-    - name: Scan for vulnerabilities
-      uses: anchore/scan-action@v3
-      with:
-        path: .
-        fail-build: true
-        severity-cutoff: critical
-        
-    - name: Generate SBOM
-      uses: anchore/sbom-action@v0.6.0
-      with:
-        image: ${{ steps.meta.outputs.tags }}
-        artifact-name: sbom.json
-        format: cyclonedx-json
-
     - name: Push Docker image
       id: docker-build-push
       uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
@@ -76,6 +107,28 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+
+  sign-image-attestations:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write   # This is the key for OIDC!
+
+  - uses: actions/download-artifact@master
+    with:
+      name: sbom.json
+      path: sbom.json
+
+  - uses: actions/download-artifact@master
+    with:
+      name: scan.json
+      path: scan.json
+
+    - uses: actions/download-artifact@master
+    with:
+      name: provenance.json
+      path: provenance.json
 
     - name: Install Cosign
       uses: sigstore/cosign-installer@v2.0.0

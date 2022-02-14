@@ -38,11 +38,14 @@ spec:
               - key: "{{ descriptor.name }}"
                 operator: Equals
                 value: grype
-              - key: "{{ matches[?vulnerability.severity == 'Critical'] | length(@) }}"
-                operator: Equals
-                value: 0
-              - key: "{{ matches[?vulnerability.severity == 'Medium'] | length(@) }}"
-                operator: Equals
-                value: 0                
+              - key: "{{ time_since('', descriptor.db.built, '') }}"
+                operator: LessThan
+                value: 168h
+              - key: "{{ matches[].vulnerability.severity }}"
+                operator: AnyNotIn
+                value: ["Critical", "High", "Medium"]
+              # - key: "{{ matches[?vulnerability.severity == 'Critical'] | length(@) }}"
+              #   operator: Equals
+              #  value: 0 
           - predicateType: https://example.com/provenance
 
