@@ -89,14 +89,14 @@ jobs:
         exit-code: '1'
         ignore-unfixed: true
         vuln-type: 'os,library'
-        output: /tmp/scan.json
+        output: scan.json
         severity: 'CRITICAL,HIGH'
 
     - name: Upload vulnerability scan report
       uses: actions/upload-artifact@v2
       with:
         name: scan.json
-        path: /tmp/scan.json
+        path: scan.json
         if-no-files-found: error
 
   # scan-image:
