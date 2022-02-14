@@ -6,10 +6,8 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  # TODO derive tag from repo
   TAG: v1
-  GRYPE_OUTPUT: json
-  GRYPE_QUIET: true
-  GRYPE_FILE : scan.json
 
 jobs:
 
@@ -70,7 +68,7 @@ jobs:
 
   scan-image:
     runs-on: ubuntu-latest
-    #needs: [build-image]
+    needs: [build-image]
     permissions:
       contents: read
     steps:
@@ -104,7 +102,7 @@ jobs:
 
   generate-sbom:
     runs-on: ubuntu-latest
-    #needs: [build-image]
+    needs: [build-image]
     permissions:
       contents: read
     steps:
