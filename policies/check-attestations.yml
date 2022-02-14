@@ -31,21 +31,22 @@ spec:
           TNMea7Ix/stJ5TfcLLeABLE4BNJOsQ4vnBHJ
           -----END CERTIFICATE-----
         attestations:
-          - predicateType: https://cyclonedx.org/bom
+          # check that an SBOM in CycloneDX format was provided
+          - predicateType: https://cyclonedx.org/BOM/V1
+          # check that a vulnerability scan report is provided, and:
+          # 1. Trivy was used to scan the image
+          # 2. No vulnerabilities with a score above 8 exist 
           - predicateType: https://grype.anchore.com/scan
             conditions:
             - all:
-              - key: "{{ descriptor.name }}"
+              - key: "{{ scanner }}"
                 operator: Equals
-                value: grype
-              - key: "{{ time_since('', descriptor.db.built, '') }}"
+                value: trivy
+              - key: "{{ time_since('', timestamp, '') }}"
                 operator: LessThan
                 value: 168h
-              - key: "{{ matches[].vulnerability.severity }}"
-                operator: AnyNotIn
-                value: ["Critical", "High", "Medium"]
-              # - key: "{{ matches[?vulnerability.severity == 'Critical'] | length(@) }}"
-              #   operator: Equals
-              #  value: 0 
+              - key: "{{ Results[].Vulnerabilities[?CVSS.redhat.V3Score > `8.0`][] | length(@) }}"
+                operator: Equals
+                value: 0
           - predicateType: https://example.com/provenance
 

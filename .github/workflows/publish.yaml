@@ -93,13 +93,13 @@ jobs:
     - name: Add scan metadata
       uses: sergeysova/jq-action@v2
       with:
-        cmd: cat scan.json | jq '. + {timestamp:(now|todateiso8601)}' | jq '. + {scanner:"trivy"}' > scan.json
+        cmd: cat scan.json | jq '. + {timestamp:(now|todateiso8601)}' | jq '. + {scanner:"trivy"}' > scan-enriched.json
 
     - name: Upload vulnerability scan report
       uses: actions/upload-artifact@v2
       with:
         name: scan.json
-        path: scan.json
+        path: scan-enriched.json
         if-no-files-found: error
 
   # scan-image:

@@ -45,7 +45,7 @@
         },
         {
           "created": "2022-02-02T02:58:19Z",
-          "created_by": "/bin/sh -c apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales python-is-python3     && echo \"en_US.UTF-8 UTF-8\" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*"
+          "created_by": "/bin/sh -c apt-get update     \u0026\u0026 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales python-is-python3     \u0026\u0026 echo \"en_US.UTF-8 UTF-8\" \u003e\u003e /etc/locale.gen     \u0026\u0026 locale-gen en_US.UTF-8     \u0026\u0026 rm -rf /var/lib/apt/lists/*"
         },
         {
           "created": "2022-02-02T02:58:20Z",
@@ -54,7 +54,7 @@
         },
         {
           "created": "2022-02-10T20:19:46Z",
-          "created_by": "/bin/sh -c set -eux;     ARCH=\"$(dpkg --print-architecture)\";     case \"${ARCH}\" in        aarch64|arm64)          ESUM='22496d5e677aaccc5a85e90584d0a012c51a08898f0e09e259eabe67ed81da2b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_aarch64_linux_hotspot_8u322b06.tar.gz';          ;;        armhf|arm)          ESUM='48181f17b85a13c0e2f260c8f4b39483e61664cf07ea00e6210a666fb5210492';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_arm_linux_hotspot_8u322b06.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f15b536a97c27d114c0b59c86de07ca80a271d3979ed0aa056318ea329e31e5d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_ppc64le_linux_hotspot_8u322b06.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='9c4607cee01919a21c57a36e8c009a7aca7aefd63010c64d7a3023fe8590ebe1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_x64_linux_hotspot_8u322b06.tar.gz';          ;;        *)          echo \"Unsupported arch: ${ARCH}\";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo \"${ESUM} */tmp/openjdk.tar.gz\" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;"
+          "created_by": "/bin/sh -c set -eux;     ARCH=\"$(dpkg --print-architecture)\";     case \"${ARCH}\" in        aarch64|arm64)          ESUM='22496d5e677aaccc5a85e90584d0a012c51a08898f0e09e259eabe67ed81da2b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_aarch64_linux_hotspot_8u322b06.tar.gz';          ;;        armhf|arm)          ESUM='48181f17b85a13c0e2f260c8f4b39483e61664cf07ea00e6210a666fb5210492';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_arm_linux_hotspot_8u322b06.tar.gz';          apt-get update          \u0026\u0026 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          \u0026\u0026 rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f15b536a97c27d114c0b59c86de07ca80a271d3979ed0aa056318ea329e31e5d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_ppc64le_linux_hotspot_8u322b06.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='9c4607cee01919a21c57a36e8c009a7aca7aefd63010c64d7a3023fe8590ebe1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_x64_linux_hotspot_8u322b06.tar.gz';          ;;        *)          echo \"Unsupported arch: ${ARCH}\";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo \"${ESUM} */tmp/openjdk.tar.gz\" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;"
         },
         {
           "created": "2022-02-10T20:19:46Z",
@@ -63,7 +63,7 @@
         },
         {
           "created": "2022-02-10T20:19:47Z",
-          "created_by": "/bin/sh -c echo Verifying install ...     && echo java -version && java -version     && echo Complete.",
+          "created_by": "/bin/sh -c echo Verifying install ...     \u0026\u0026 echo java -version \u0026\u0026 java -version     \u0026\u0026 echo Complete.",
           "empty_layer": true
         },
         {
@@ -122,11 +122,11 @@
         },
         {
           "created": "2022-02-10T21:21:24Z",
-          "created_by": "/bin/sh -c set -eux; \tapt-get update; \txargs -rt apt-get install -y --no-install-recommends < \"$TOMCAT_NATIVE_LIBDIR/.dependencies.txt\"; \trm -rf /var/lib/apt/lists/*"
+          "created_by": "/bin/sh -c set -eux; \tapt-get update; \txargs -rt apt-get install -y --no-install-recommends \u003c \"$TOMCAT_NATIVE_LIBDIR/.dependencies.txt\"; \trm -rf /var/lib/apt/lists/*"
         },
         {
           "created": "2022-02-10T21:21:25Z",
-          "created_by": "/bin/sh -c set -eux; \tnativeLines=\"$(catalina.sh configtest 2>&1)\"; \tnativeLines=\"$(echo \"$nativeLines\" | grep 'Apache Tomcat Native')\"; \tnativeLines=\"$(echo \"$nativeLines\" | sort -u)\"; \tif ! echo \"$nativeLines\" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then \t\techo >&2 \"$nativeLines\"; \t\texit 1; \tfi",
+          "created_by": "/bin/sh -c set -eux; \tnativeLines=\"$(catalina.sh configtest 2\u003e\u00261)\"; \tnativeLines=\"$(echo \"$nativeLines\" | grep 'Apache Tomcat Native')\"; \tnativeLines=\"$(echo \"$nativeLines\" | sort -u)\"; \tif ! echo \"$nativeLines\" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' \u003e\u00262; then \t\techo \u003e\u00262 \"$nativeLines\"; \t\texit 1; \tfi",
           "empty_layer": true
         },
         {
@@ -1104,7 +1104,7 @@
             "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/168030.html",
             "http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00032.html",
             "http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00033.html",
-            "http://svn.apache.org/viewvc?view=revision&revision=1626784",
+            "http://svn.apache.org/viewvc?view=revision\u0026revision=1626784",
             "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html",
             "http://www.securitytracker.com/id/1033743",
             "http://www.ubuntu.com/usn/USN-2769-1",
@@ -1229,7 +1229,5 @@
         }
       ]
     }
-  ],
-  "timestamp": "2022-02-14T08:56:01Z",
-  "scanner": "trivy"
+  ]
 }
