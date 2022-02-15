@@ -61,7 +61,7 @@ jobs:
 
     - name: Get image digest
       id: digest
-      run: echo "::set-output name=digest::$(docker inspect ${{ steps.build.outputs.digest }} | jq -r '.[].RepoDigests[0] | split("@") | .[1]')"
+      run: echo "::set-output name=digest::$(docker inspect ${{ steps.docker-build-push.outputs.digest }} | jq -r '.[].RepoDigests[0] | split("@") | .[1]')"
 
     - name: Generate provenance
       uses: slsa-framework/github-actions-demo@v0.1
