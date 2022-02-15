@@ -6,15 +6,15 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  # TODO derive tag from repo
-  TAG: v1
 
 jobs:
 
   build-image:
     runs-on: ubuntu-latest
     outputs:
+      tags: ${{ steps.meta.outputs.tags }}
       digest: ${{ steps.docker-build-push.digest }}
+      image: ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.digest }}
     permissions:
       contents: read
       packages: write
@@ -75,16 +75,11 @@ jobs:
       contents: read
     steps:
 
-    - name: Get Repository
-      run: |
-        export GITHUB_REPOSITORY=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
-        echo "REPO=${GITHUB_REPOSITORY,,}@${{needs.build-image.outputs.digest}}" >>${GITHUB_ENV}
-
     - name: Scan for vulnerabilities
       uses: aquasecurity/trivy-action@0.2.2
       with: 
         scan-type: 'image'
-        image-ref: ${{ env.REPO }}
+        image-ref: ${{ needs.build-image.output.image }}
         format: 'json'
         ignore-unfixed: true
         vuln-type: 'os,library'
@@ -109,15 +104,10 @@ jobs:
       contents: read
     steps:
 
-    - name: Get Repository
-      run: |
-        export GITHUB_REPOSITORY=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
-        echo "REPO=${GITHUB_REPOSITORY,,}@${{needs.build-image.outputs.digest}}" >>${GITHUB_ENV}
-
     - name: Generate SBOM
       uses: anchore/sbom-action@v0.6.0
       with:
-        image: ${{ env.REPO }}
+        image:  ${{ needs.build-image.output.image }}
         artifact-name: sbom.json
         format: cyclonedx-json
 
@@ -147,12 +137,6 @@ jobs:
       with:
         cosign-release: 'v1.5.1'
 
-    # TODO GET DIGEST
-    - name: Get Repository
-      run: |
-        export GITHUB_REPOSITORY=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
-        echo "REPO=${GITHUB_REPOSITORY,,}@${{needs.build-image.outputs.digest}}" >>${GITHUB_ENV}
-
     - name: Log in to the Container registry
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
       with:
@@ -170,20 +154,20 @@ jobs:
         -a "repo=${{ github.repository }}" \
         -a "workflow=${{ github.workflow }}" \
         -a "ref=${{ github.sha }}" \
-        ${{ env.REPO }}
+         ${{ needs.build-image.output.image }}
 
     - name : Attest SBOM
       env:
         COSIGN_EXPERIMENTAL: "true"
-      run: cosign attest --force --replace --predicate sbom.json --type https://cyclonedx.org/BOM/v1  ${{ env.REPO }}
+      run: cosign attest --force --replace --predicate sbom.json --type https://cyclonedx.org/BOM/v1   ${{ needs.build-image.output.image }}
 
     - name : Attest Vulnerability Scan
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate scan.json --type https://trivy.aquasec.com/scan/v2  ${{ env.REPO }}
+      run: cosign attest --force --replace --predicate scan.json --type https://trivy.aquasec.com/scan/v2   ${{ needs.build-image.output.image }}
 
     - name : Attest Provenance
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate provenance.json --type https://example.com/provenance/v1  ${{ env.REPO }}
+      run: cosign attest --force --replace --predicate provenance.json --type https://example.com/provenance/v1  ${{ needs.build-image.output.image }}
 
