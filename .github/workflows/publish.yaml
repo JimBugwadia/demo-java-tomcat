@@ -48,7 +48,7 @@ jobs:
       with:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
-          type=raw,value=${{ steps.tagName.outputs.tag }}
+          type=raw,value=v1
 
     - name: Push Docker image
       id: docker-build-push
