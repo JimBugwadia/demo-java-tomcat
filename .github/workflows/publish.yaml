@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       tags: ${{ steps.meta.outputs.tags }}
-      digest: ${{ steps.docker-build-push.outputs.digest }}
-      image: ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}
+      digest: ${{ steps.digest.outputs.digest }}
+      image: ${{ steps.meta.outputs.tags }}@${{ steps.digest.outputs.digest }}
     permissions:
       contents: read
       packages: write
@@ -58,6 +58,10 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Get image digest
+      id: digest
+      run: echo "::set-output name=digest::$(docker inspect ${{ steps.build.outputs.digest }} | jq -r '.[].RepoDigests[0] | split("@") | .[1]')"
 
     - name: Generate provenance
       uses: slsa-framework/github-actions-demo@v0.1
