@@ -71,6 +71,12 @@ jobs:
         name: provenance.json
         path: provenance.json
 
+    - name: Echo outputs
+      run: |
+        echo "tags: ${{ steps.meta.outputs.tags }}"
+        echo "digest: ${{ steps.docker-build-push.outputs.digest }}"
+        echo "image: ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}"
+
   scan-image:
     runs-on: ubuntu-latest
     needs: [build-image]
@@ -99,12 +105,6 @@ jobs:
         name: scan.json
         path: scan.json
         if-no-files-found: error
-
-    - name: Echo outputs
-      run: |
-        echo "tags: ${{ steps.meta.outputs.tags }}"
-        echo "digest: ${{ steps.docker-build-push.outputs.digest }}"
-        echo "image: ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}"
 
   generate-sbom:
     runs-on: ubuntu-latest
