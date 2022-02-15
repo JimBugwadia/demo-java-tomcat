@@ -78,8 +78,8 @@ jobs:
     - name: Echo outputs
       run: |
         echo "tags: ${{ steps.meta.outputs.tags }}"
-        echo "digest: ${{ steps.docker-build-push.outputs.digest }}"
-        echo "image: ${{ steps.meta.outputs.tags }}@${{ steps.docker-build-push.outputs.digest }}"
+        echo "digest: ${{ steps.digest.outputs.digest }}"
+        echo "image: ${{ steps.meta.outputs.tags }}@${{ steps.digest.outputs.digest }}"
 
   scan-image:
     runs-on: ubuntu-latest
