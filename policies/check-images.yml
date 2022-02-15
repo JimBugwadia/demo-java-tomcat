@@ -14,7 +14,7 @@ spec:
           kinds:
             - Pod
       verifyImages:
-      - image: "*"
+      - image: "ghcr.io/jimbugwadia/*"
         subject: "https://github.com/JimBugwadia/*"
         issuer: "https://token.actions.githubusercontent.com"
         roots: |-
