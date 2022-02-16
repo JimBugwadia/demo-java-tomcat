@@ -76,7 +76,7 @@ jobs:
     - name: Extract image reference
       id: image
       run: |
-        echo "::set-output name=image::=${ ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest@${{ steps.docker-build-push.outputs.digest }},,}"
+        echo "::set-output name=image::=${${{env.REGISTRY}}/${{env.IMAGE_NAME}}:latest@${{steps.docker-build-push.outputs.digest}},,}"
 
     - name: Echo outputs
       run: |
