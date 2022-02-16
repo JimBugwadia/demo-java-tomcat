@@ -15,6 +15,7 @@ jobs:
       tags: ${{ steps.meta.outputs.tags }}
       digest: ${{ steps.digest.outputs.digest }}
       image: ${{ steps.meta.outputs.tags }}@${{ steps.digest.outputs.digest }}
+      git-tag:  ${{ steps.git-tag.outputs.tag }}
     permissions:
       contents: read
       packages: write
@@ -39,8 +40,9 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - uses: olegtarasov/get-tag@v2.1
-      id: tagName
+    - name: Get tag
+      id: git-tag
+      run: echo "::set-output name=tag::$(git describe --match 'v[0-9]*')"
 
     - name: Extract metadata (tags, labels) for Docker
       id: meta
