@@ -174,15 +174,15 @@ jobs:
     - name : Attest SBOM
       env:
         COSIGN_EXPERIMENTAL: "true"
-      run: cosign attest --force --replace --predicate sbom.json --type https://cyclonedx.org/BOM/v1   ${{ needs.build-image.outputs.image }}
+      run: cosign attest --force --predicate sbom.json --type https://cyclonedx.org/BOM/v1   ${{ needs.build-image.outputs.image }}
 
     - name : Attest Vulnerability Scan
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate scan.json --type https://trivy.aquasec.com/scan/v2   ${{ needs.build-image.outputs.image }}
+      run: cosign attest --force --predicate scan.json --type https://trivy.aquasec.com/scan/v2   ${{ needs.build-image.outputs.image }}
 
     - name : Attest Provenance
       env:
         COSIGN_EXPERIMENTAL: "true"    
-      run: cosign attest --force --replace --predicate provenance.json --type https://example.com/provenance/v1  ${{ needs.build-image.outputs.image }}
+      run: cosign attest --force --predicate provenance.json --type https://example.com/provenance/v1  ${{ needs.build-image.outputs.image }}
 
