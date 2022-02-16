@@ -81,7 +81,7 @@ jobs:
       run: |
         echo "tags: ${{ steps.meta.outputs.tags }}"
         echo "digest: ${{ steps.digest.outputs.digest }}"
-        echo "image: ${{ steps.image.outputs.image }}"
+        echo "image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}:latest@${{ steps.digest.outputs.digest }}"
 
   scan-image:
     runs-on: ubuntu-latest
