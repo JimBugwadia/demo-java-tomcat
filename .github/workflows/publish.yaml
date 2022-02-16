@@ -1,7 +1,9 @@
 name: build-sign-attest
 
 on:
-  workflow_dispatch:
+  push:
+    tags:        
+      - v*
 
 env:
   REGISTRY: ghcr.io
@@ -15,7 +17,6 @@ jobs:
       tags: ${{ steps.meta.outputs.tags }}
       digest: ${{ steps.digest.outputs.digest }}
       image: ${{ steps.meta.outputs.tags }}@${{ steps.digest.outputs.digest }}
-      git-tag:  ${{ steps.git-tag.outputs.tag }}
     permissions:
       contents: read
       packages: write
@@ -40,17 +41,13 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Get tag
-      id: git-tag
-      run: echo "::set-output name=tag::$(git describe --match v[0-9]*)"
-
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
       with:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
-          type=raw,value=${{ steps.git-tag.outputs.tag }}
+          type=semver,pattern={{raw}}
 
     - name: Push Docker image
       id: docker-build-push
@@ -82,7 +79,6 @@ jobs:
         echo "tags: ${{ steps.meta.outputs.tags }}"
         echo "digest: ${{ steps.digest.outputs.digest }}"
         echo "image: ${{ steps.meta.outputs.tags }}@${{ steps.digest.outputs.digest }}"
-        echo "git-tag: ${{ steps.git-tag.outputs.tag }}"
 
   scan-image:
     runs-on: ubuntu-latest
