@@ -14,7 +14,7 @@ jobs:
   build-image:
     runs-on: ubuntu-latest
     outputs:
-      image: ${{ steps.meta.outputs.tags[0] }}@${{ steps.digest.outputs.digest }}
+      image: $${{ steps.image.outputs.image }}
     permissions:
       contents: read
       packages: write
@@ -72,11 +72,17 @@ jobs:
         name: provenance.json
         path: provenance.json
 
+
+    - name: Extract image reference
+      id: image
+      run: |
+        echo "::set-output name=image::=${ ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest@${{ steps.docker-build-push.outputs.digest }},,}"
+
     - name: Echo outputs
       run: |
         echo "tags: ${{ steps.meta.outputs.tags }}"
         echo "digest: ${{ steps.digest.outputs.digest }}"
-        echo "image: ${{ steps.meta.outputs.tags }}@${{ steps.digest.outputs.digest }}"
+        echo "image: ${{ steps.image.outputs.image }}"
 
   scan-image:
     runs-on: ubuntu-latest
