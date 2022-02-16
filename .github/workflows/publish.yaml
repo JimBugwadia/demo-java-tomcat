@@ -42,7 +42,7 @@ jobs:
 
     - name: Get tag
       id: git-tag
-      run: echo "::set-output name=tag::$(git describe --match 'v[0-9]*')"
+      run: echo "::set-output name=tag::$(git describe --match v[0-9]*)"
 
     - name: Extract metadata (tags, labels) for Docker
       id: meta
@@ -50,7 +50,7 @@ jobs:
       with:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
-          type=raw,value=v1
+          type=raw,value=${{ steps.git-tag.outputs.tag }}
 
     - name: Push Docker image
       id: docker-build-push
@@ -82,6 +82,7 @@ jobs:
         echo "tags: ${{ steps.meta.outputs.tags }}"
         echo "digest: ${{ steps.digest.outputs.digest }}"
         echo "image: ${{ steps.meta.outputs.tags }}@${{ steps.digest.outputs.digest }}"
+        echo "git-tag: ${{ steps.git-tag.outputs.tag }}"
 
   scan-image:
     runs-on: ubuntu-latest
