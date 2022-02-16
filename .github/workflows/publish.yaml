@@ -14,7 +14,7 @@ jobs:
   build-image:
     runs-on: ubuntu-latest
     outputs:
-      image: $${{ steps.image.outputs.image }}
+      image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}:latest@${{ steps.docker-build-push.outputs.digest }}
     permissions:
       contents: read
       packages: write
@@ -73,10 +73,10 @@ jobs:
         path: provenance.json
 
 
-    - name: Extract image reference
-      id: image
+    - name: Lowecase repo name
+      id: repo
       run: |
-        echo "::set-output name=image::=${${{env.REGISTRY}}/${{env.IMAGE_NAME}}:latest@${{steps.docker-build-push.outputs.digest}},,}"
+        echo ":set-output name=repo::${GITHUB_REPOSITORY,,}"
 
     - name: Echo outputs
       run: |
