@@ -14,7 +14,7 @@ jobs:
   build-image:
     runs-on: ubuntu-latest
     outputs:
-      image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest@${{ steps.digest.outputs.digest }}
+      image: ${{ steps.meta.outputs.tags[0] }}@${{ steps.digest.outputs.digest }}
     permissions:
       contents: read
       packages: write
