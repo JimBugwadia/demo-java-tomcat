@@ -150,7 +150,7 @@ jobs:
     - name: Install Cosign
       uses: sigstore/cosign-installer@v2.0.0
       with:
-        cosign-release: 'v1.5.1'
+        cosign-release: 'v1.7.1'
 
     - name: Log in to the Container registry
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
