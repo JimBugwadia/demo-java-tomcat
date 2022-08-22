@@ -25,7 +25,7 @@ repositories {
 dependencies {	    
 	compile 'com.sun.jersey:jersey-server:1.8'
 	
-	compile 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.13.2.1'
 	compile 'com.google.guava:guava:18.0-rc1'
 	
 	compile 'org.apache.httpcomponents:httpclient:4.2.5'	

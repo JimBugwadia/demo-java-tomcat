@@ -34,10 +34,13 @@ spec:
           - predicateType: https://trivy.aquasec.com/scan/v2
             conditions:
             - all:
+              - key: "{{ scanner.uri }}"
+                operator: Equals
+                value: "pkg:github/aquasecurity/trivy@0.31.*"
               - key: "{{ time_since('','{{metadata.scanFinishedOn}}','') }}"
                 operator: LessThanOrEquals
                 value: 24h
-              - key: "{{ Results[].Vulnerabilities[?CVSS.redhat.V3Score > `8.0`][] | length(@) }}"
+              - key: "{{ scanner.result.Results[].Vulnerabilities[?CVSS.redhat.V3Score > `8.0`][] | length(@) }}"
                 operator: Equals
                 value: 0
           # check build provenance data was provided
