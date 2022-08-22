@@ -95,10 +95,10 @@ jobs:
       with: 
         scan-type: 'image'
         image-ref: ${{ needs.build-image.outputs.image }}
-        format: 'json'
+        format: 'cosign-vuln'
         ignore-unfixed: true
         vuln-type: 'os,library'
-        output: trivy-scan.json
+        output: scan.json
 
     - name: Upload vulnerability scan report
       uses: actions/upload-artifact@v2
