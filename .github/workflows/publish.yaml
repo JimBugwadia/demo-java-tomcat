@@ -14,7 +14,7 @@ jobs:
   build-image:
     runs-on: ubuntu-latest
     outputs:
-      image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}:latest@${{ steps.digest.outputs.digest }}
+      image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}@${{ steps.digest.outputs.digest }}
     permissions:
       contents: read
       packages: write
@@ -72,7 +72,7 @@ jobs:
         name: provenance.json
         path: provenance.json
 
-    - name: Lowecase repo name
+    - name: Lowercase repo name
       id: repo
       run: |
         echo "::set-output name=repo::${GITHUB_REPOSITORY,,}"
@@ -81,7 +81,7 @@ jobs:
       run: |
         echo "tags: ${{ steps.meta.outputs.tags }}"
         echo "digest: ${{ steps.digest.outputs.digest }}"
-        echo "image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}:latest@${{ steps.digest.outputs.digest }}"
+        echo "image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}@${{ steps.digest.outputs.digest }}"
 
   scan-image:
     runs-on: ubuntu-latest
@@ -91,7 +91,7 @@ jobs:
     steps:
 
     - name: Scan for vulnerabilities
-      uses: aquasecurity/trivy-action@0.2.2
+      uses: aquasecurity/trivy-action@1db49f532692e649dc5dc43c7c0444dac4790137
       with: 
         scan-type: 'image'
         image-ref: ${{ needs.build-image.outputs.image }}
@@ -99,11 +99,6 @@ jobs:
         ignore-unfixed: true
         vuln-type: 'os,library'
         output: trivy-scan.json
-
-    - name: Add scan metadata
-      uses: sergeysova/jq-action@v2
-      with:
-        cmd: cat trivy-scan.json | jq '. + {timestamp:(now|todateiso8601)}' | jq '. + {scanner:"trivy"}' > scan.json
 
     - name: Upload vulnerability scan report
       uses: actions/upload-artifact@v2
