@@ -1,0 +1,42 @@
+{
+  "_type": "https://in-toto.io/Statement/v0.1",
+  "subject": [
+    {
+      "name": "service.war",
+      "digest": {
+        "sha256": "8aa38ef71e102cf8e25a241e525ba826967f912844d30daa421ac5b1467cad11"
+      }
+    }
+  ],
+  "predicateType": "https://in-toto.io/Provenance/v0.1",
+  "predicate": {
+    "builder": {
+      "id": "https://github.com/JimBugwadia/demo-java-tomcat/Attestations/GitHubHostedActions@v1"
+    },
+    "metadata": {
+      "buildInvocationId": "https://github.com/JimBugwadia/demo-java-tomcat/actions/runs/2901035055",
+      "completeness": {
+        "arguments": true,
+        "environment": false,
+        "materials": false
+      },
+      "reproducible": false,
+      "buildFinishedOn": "2022-08-22T03:22:54Z"
+    },
+    "recipe": {
+      "type": "https://github.com/Attestations/GitHubActionsWorkflow@v1",
+      "definedInMaterial": 0,
+      "entryPoint": "build-sign-attest",
+      "arguments": null,
+      "environment": null
+    },
+    "materials": [
+      {
+        "uri": "git+https://github.com/JimBugwadia/demo-java-tomcat",
+        "digest": {
+          "sha1": "eb9c3120af463000edb5b786e681fcbf9d1656c8"
+        }
+      }
+    ]
+  }
+}
