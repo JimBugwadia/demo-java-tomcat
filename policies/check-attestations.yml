@@ -22,8 +22,28 @@ spec:
               issuer: "https://token.actions.githubusercontent.com"
               additionalExtensions:
                 githubWorkflowTrigger: push
-                githubWorkflowSha: eb9c3120af463000edb5b786e681fcbf9d1656c8
+                githubWorkflowSha: 73f9df28b6c67e3d4a4ffc4b75aaeed89be88b58
                 githubWorkflowName: build-sign-attest
                 githubWorkflowRepository: JimBugwadia/demo-java-tomcat
+        attestations:
+          # check that an SBOM in CycloneDX format was provided
+          - predicateType: https://cyclonedx.org/BOM/v1
+          # check that a vulnerability scan report is provided, and:
+          # 1. Trivy was used to scan the image
+          # 2. No vulnerabilities with a score above 8 exist 
+          - predicateType: https://trivy.aquasec.com/scan/v2
+            conditions:
+            - all:
+              - key: "{{ scanner.uri }}"
+                operator: Equals
+                value: "pkg:github/aquasecurity/trivy@0.31.*"
+              - key: "{{ time_since('','{{metadata.scanFinishedOn}}','') }}"
+                operator: LessThanOrEquals
+                value: 24h
+              - key: "{{ scanner.result.Results[].Vulnerabilities[?CVSS.redhat.V3Score > `8.0`][] | length(@) }}"
+                operator: Equals
+                value: 0
+          # check build provenance data was provided
+          - predicateType: https://example.com/provenance/v1
 
 
