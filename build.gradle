@@ -23,16 +23,16 @@ repositories {
 }
 
 dependencies {	    
-	compile 'com.sun.jersey:jersey-server:1.8'
+	implementation 'com.sun.jersey:jersey-server:1.19'
 	
-	compile 'com.fasterxml.jackson.core:jackson-databind:2.13.4.2'
-	compile 'com.google.guava:guava:24.1.1-jre'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.2'
+	implementation 'com.google.guava:guava:24.1.1-jre'
 	
-	compile 'org.apache.httpcomponents:httpclient:4.5.13'	
+	implementation 'org.apache.httpcomponents:httpclient:4.5.13'	
 	
-	compile 'org.slf4j:slf4j-api:1.6.4'
-	compile 'ch.qos.logback:logback-classic:1.2.9'
-	compile 'ch.qos.logback:logback-core:1.2.9'	
+	implementation 'org.slf4j:slf4j-api:1.6.4'
+	implementation 'ch.qos.logback:logback-classic:1.2.9'
+	implementation 'ch.qos.logback:logback-core:1.2.9'	
 }
 
 task copyWar(type: Copy) {
