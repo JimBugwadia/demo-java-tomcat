@@ -59,7 +59,7 @@ jobs:
 
     - name: Get image digest
       id: digest
-      run: echo "::set-output name=digest::$(docker inspect ${{ steps.docker-build-push.outputs.digest }} | jq -r '.[].RepoDigests[0] | split("@") | .[1]')"
+      run: echo "digest=$(docker inspect ${{ steps.docker-build-push.outputs.digest }} | jq -r '.[].RepoDigests[0] | split("@") | .[1]')" >> $GITHUB_OUTPUT
 
     # Replace with latest SLSA Generator
     # See: https://github.com/ianlewis/actions-test/blob/main/.github/workflows/generic-container.yml
@@ -78,7 +78,7 @@ jobs:
     - name: Lowercase repo name
       id: repo
       run: |
-        echo "::set-output name=repo::${GITHUB_REPOSITORY,,}"
+        echo "repo=${GITHUB_REPOSITORY,,}" >> $GITHUB_OUTPUT
 
     - name: Echo outputs
       run: |
@@ -94,7 +94,7 @@ jobs:
     steps:
 
     - name: Scan for vulnerabilities
-      uses: aquasecurity/trivy-action@1db49f532692e649dc5dc43c7c0444dac4790137
+      uses: aquasecurity/trivy-action@0.9.1
       with: 
         scan-type: 'image'
         image-ref: ${{ needs.build-image.outputs.image }}
@@ -118,7 +118,7 @@ jobs:
     steps:
 
     - name: Generate SBOM
-      uses: anchore/sbom-action@v0.6.0
+      uses: anchore/sbom-action@v0.13.3
       with:
         image:  ${{ needs.build-image.outputs.image }}
         artifact-name: sbom.json
