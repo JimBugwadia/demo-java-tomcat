@@ -1,4 +1,4 @@
-FROM tomcat:9.0
+FROM tomcat:9.0.71-jdk17-corretto
 LABEL author "jim@nirmata.com"
 
 ADD build/libs/service.war /usr/local/tomcat/webapps/service.war
