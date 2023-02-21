@@ -100,7 +100,7 @@ jobs:
         output: scan.json
 
     - name: Upload vulnerability scan report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3.1.2
       with:
         name: scan.json
         path: scan.json
@@ -130,15 +130,15 @@ jobs:
       id-token: write   # This is the key for OIDC!
     steps:
 
-    - uses: actions/download-artifact@master
+    - uses: actions/download-artifact@v3.0.2
       with:
         name: sbom.json
 
-    - uses: actions/download-artifact@master
+    - uses: actions/download-artifact@v3.0.2
       with:
         name: scan.json
 
-    - uses: actions/download-artifact@master
+    - uses: actions/download-artifact@v3.0.2
       with:
         name: provenance.json
 
