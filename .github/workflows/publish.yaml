@@ -15,7 +15,7 @@ jobs:
   build-image:
     runs-on: ubuntu-latest
     outputs:
-      image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}@${{ steps.digest.outputs.digest }}
+      image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}@${{ steps.docker-build-push.outputs.digest }}
     permissions:
       contents: read
       packages: write
@@ -57,10 +57,6 @@ jobs:
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
 
-    - name: Get image digest
-      id: digest
-      run: echo "digest=$(docker inspect ${{ steps.docker-build-push.outputs.digest }} | jq -r '.[].RepoDigests[0] | split("@") | .[1]')" >> $GITHUB_OUTPUT
-
     # Replace with latest SLSA Generator
     # See: https://github.com/ianlewis/actions-test/blob/main/.github/workflows/generic-container.yml
     - name: Generate provenance
@@ -83,8 +79,8 @@ jobs:
     - name: Echo outputs
       run: |
         echo "tags: ${{ steps.meta.outputs.tags }}"
-        echo "digest: ${{ steps.digest.outputs.digest }}"
-        echo "image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}@${{ steps.digest.outputs.digest }}"
+        echo "digest: ${{ steps.docker-build-push.outputs.digest }}"
+        echo "image: ${{ env.REGISTRY }}/${{ steps.repo.outputs.repo }}@${{ steps.docker-build-push.outputs.digest }}"
 
   scan-image:
     runs-on: ubuntu-latest
